@@ -36,6 +36,165 @@ Aaj ke topics hain: operators, expression evaluation, if statement, if-else, if-
 
 ---
 
+# Day 3 Keyword Master Guide - Pehle Yeh Clear Karo
+
+Day 3 mein kuch keywords aur symbols baar-baar use honge. Agar yeh keywords clear ho gaye, to operators, conditions, loops, and patterns samajhna easy ho jayega. Is section ko class ke start mein zaroor explain karo.
+
+## `if` Keyword
+
+`if` ka meaning hota hai “agar”. Python mein `if` decision making ke liye use hota hai. Jab hume program se puchna ho ki koi condition true hai ya false, tab `if` use karte hain. Example: agar marks 40 se zyada hain, to pass print karo.
+
+`if` ke baad condition likhi jaati hai. Condition ka result `True` ya `False` hota hai. Agar condition true hoti hai, to `if` ke andar wala indented code run hota hai. Agar condition false hoti hai, to Python us block ko skip kar deta hai.
+
+```python
+marks = 75
+
+if marks >= 40:
+    print("Pass")
+```
+
+Line `if marks >= 40:` mein Python check karta hai ki marks 40 ya usse zyada hain ya nahi. Colon `:` batata hai ki condition ka block ab start hoga. Next line mein indentation hai, isliye `print("Pass")` if block ka part hai.
+
+## `else` Keyword
+
+`else` ka meaning hota hai “warna”. Jab `if` condition false ho jaati hai, tab `else` block run hota hai. `else` ke saath condition nahi likhte, kyunki else ka kaam hi hota hai false case handle karna.
+
+```python
+marks = 35
+
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+Yahan marks 35 hain, so `marks >= 40` false hai. Python `print("Pass")` ko skip karega and `else` block mein jayega. `else` block ke andar `print("Fail")` run hoga. Isse program two possible outputs handle kar sakta hai.
+
+## `elif` Keyword
+
+`elif` ka full meaning hota hai “else if”. Jab hume multiple conditions check karni hoti hain, tab `elif` use hota hai. Python conditions ko top se bottom check karta hai. Jis condition par first time true milta hai, uska block run hota hai and baaki conditions skip ho jaati hain.
+
+```python
+marks = 82
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+else:
+    print("Needs Improvement")
+```
+
+Yahan Python pehle check karta hai marks 90 ya usse zyada hain kya. Ye false hai. Phir Python `elif marks >= 75` check karta hai. Ye true hai, so `Grade B` print hota hai. Iske baad Python `else` tak nahi jaata.
+
+## `for` Keyword
+
+`for` loop fixed repetition ke liye use hota hai. Jab hume pata ho ki code kitni baar repeat karna hai, tab `for` loop best hota hai. Example: 1 se 10 tak numbers print karna, table print karna, list ke items print karna.
+
+```python
+for number in range(1, 6):
+    print(number)
+```
+
+Is code mein `range(1, 6)` numbers 1 se 5 tak generate karta hai. `number` loop variable hai. Har round mein `number` ki value change hoti hai. Pehle 1, phir 2, phir 3, phir 4, phir 5. Har round mein `print(number)` run hota hai.
+
+## `while` Keyword
+
+`while` loop condition-based repetition ke liye use hota hai. Jab tak condition true hoti hai, loop repeat hota rehta hai. Agar condition false ho jaati hai, loop stop ho jata hai.
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+Yahan `count` 1 se start hota hai. Jab tak `count <= 5` true hai, loop chalega. Har round mein count print hota hai and `count += 1` se count increase hota hai. Agar `count += 1` nahi likhenge, loop infinite ho sakta hai.
+
+## `range()` Function
+
+`range()` numbers generate karta hai. Ye mostly `for` loop ke saath use hota hai. Important rule: range ki ending value include nahi hoti.
+
+```python
+range(1, 6)
+```
+
+Ye 1, 2, 3, 4, 5 generate karega. 6 include nahi hoga. Agar hume 1 se 10 tak chalana hai, to `range(1, 11)` likhna padega. Beginners aksar yahan confuse hote hain, isliye ending value ka rule baar-baar explain karo.
+
+## `break` Keyword
+
+`break` loop ko turant stop karta hai. Agar loop ke beech mein koi condition true ho jaye aur hume loop continue nahi karna, tab `break` use karte hain.
+
+```python
+for number in range(1, 10):
+    if number == 5:
+        break
+    print(number)
+```
+
+Jab number 5 hota hai, `break` execute hota hai and loop stop ho jata hai. Isliye output mein 1, 2, 3, 4 print hote hain, but 5 print nahi hota. Break ka meaning hai: “ab loop se bahar nikal jao”.
+
+## `continue` Keyword
+
+`continue` loop ko stop nahi karta. Ye sirf current round skip karta hai and next round par chala jata hai. Jab kisi specific value ko ignore karna ho, tab continue useful hota hai.
+
+```python
+for number in range(1, 6):
+    if number == 3:
+        continue
+    print(number)
+```
+
+Yahan jab number 3 hota hai, `continue` run hota hai. Us round mein `print(number)` execute nahi hota. Output 1, 2, 4, 5 aata hai. Continue ka meaning hai: “is round ko skip karo, next round par jao”.
+
+## `pass` Keyword
+
+`pass` ka matlab hai “abhi kuch nahi karna”. Python empty block allow nahi karta. Agar hume future mein code add karna hai but abhi block empty rakhna hai, tab `pass` use karte hain.
+
+```python
+for number in range(1, 4):
+    pass
+```
+
+Ye code koi output nahi dega, but error bhi nahi dega. `pass` placeholder hai. Isse Python ko pata chalta hai ki block intentionally empty hai.
+
+## Colon `:` ka Role
+
+Python mein `if`, `elif`, `else`, `for`, and `while` ke baad colon `:` lagta hai. Colon ka meaning hai: “ab is statement ka block start hone wala hai.” Agar colon miss ho gaya, Python syntax error dega.
+
+```python
+if marks >= 40:
+    print("Pass")
+```
+
+Yahan colon ke baad next line indented hai. Ye indentation Python ko batati hai ki `print("Pass")` if block ke andar hai.
+
+## Indentation ka Role
+
+Indentation Python mein bahut important hai. Indentation ka matlab line ke start mein spaces. Python braces `{}` use nahi karta. Python indentation se samajhta hai ki kaunsi line kis block ke andar hai.
+
+```python
+if marks >= 40:
+    print("Pass")
+print("Program finished")
+```
+
+Is example mein `print("Pass")` if block ke andar hai because ye indented hai. `print("Program finished")` if block ke bahar hai because ye left side se start ho raha hai. Ye line condition true ho ya false, dono cases mein run ho sakti hai.
+
+## `=` aur `==` ka Difference
+
+`=` assignment ke liye hota hai. Iska use value store karne ke liye hota hai. `==` comparison ke liye hota hai. Iska use check karne ke liye hota hai ki two values equal hain ya nahi.
+
+```python
+marks = 75
+print(marks == 75)
+```
+
+First line mein `marks = 75` value store kar raha hai. Second line mein `marks == 75` check kar raha hai ki marks 75 ke equal hain ya nahi. Beginners ko ye difference clearly samajhna bahut zaroori hai.
+
+---
+
 # Chapter 1 - Arithmetic Operators
 
 ## Arithmetic Operators Kya Hote Hain?
@@ -1386,6 +1545,106 @@ Without `pass`, Python empty block par error dega. Isliye `pass` code structure 
 8. Password input lo. Agar password correct hai to login success, warna wrong password.
 9. User se rows input lo and dynamic pattern print karo.
 10. Grade system and multiplication table ko combine karke mini project banao.
+
+---
+
+# Day 3 No-Confusion Revision
+
+## Confusion 1 - `if`, `elif`, and `else` kab use karna hai?
+
+Agar sirf one condition check karni hai, to `if` use karo. Agar true and false dono cases handle karne hain, to `if-else` use karo. Agar multiple conditions check karni hain, to `if-elif-else` use karo.
+
+Example: Agar sirf pass check karna hai, `if` enough hai. Agar pass/fail dono print karna hai, `if-else` use karo. Agar grade A/B/C/Fail decide karna hai, `if-elif-else` use karo.
+
+## Confusion 2 - `for` loop aur `while` loop mein difference kya hai?
+
+`for` loop tab use karo jab repeat count clear ho. Example: table 1 se 10 tak print karna. `while` loop tab use karo jab repetition condition par depend kare. Example: jab tak password correct na ho, input mangte raho.
+
+Simple line:
+
+```text
+for loop = fixed repetition
+while loop = condition-based repetition
+```
+
+## Confusion 3 - `range(1, 11)` mein 11 include kyu nahi hota?
+
+Python range ki ending value include nahi karta. `range(1, 11)` ka matlab hai start 1 se karo and 11 se pehle stop ho jao. Isliye output 1 se 10 tak hota hai.
+
+Beginners ko yaad rakhna hai: agar 1 to 10 chahiye, to ending 11 likho. Agar 1 to 5 chahiye, to ending 6 likho.
+
+## Confusion 4 - Indentation error kyu aata hai?
+
+Python indentation se block samajhta hai. Agar `if`, `for`, `while`, `else`, `elif` ke baad line proper spaces ke saath nahi likhi gayi, to indentation error aa sakta hai.
+
+Wrong:
+
+```python
+if marks >= 40:
+print("Pass")
+```
+
+Correct:
+
+```python
+if marks >= 40:
+    print("Pass")
+```
+
+Correct code mein `print("Pass")` line thodi right side shifted hai. Isi shift ko indentation kehte hain.
+
+## Confusion 5 - Infinite loop kya hota hai?
+
+Infinite loop wo loop hota hai jo stop hi nahi hota. Usually while loop mein control variable update nahi karte, tab infinite loop ban sakta hai.
+
+Wrong:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+```
+
+Correct:
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+Correct code mein `count += 1` hai, isliye count increase hota hai. Jab count 6 hota hai, condition false ho jaati hai and loop stop hota hai.
+
+## Confusion 6 - `break` aur `continue` same hain kya?
+
+Nahi. `break` loop ko completely stop karta hai. `continue` sirf current round skip karta hai. Break ka matlab hai “loop khatam”. Continue ka matlab hai “ye round skip, next round start”.
+
+Example:
+
+```text
+break = stop the loop
+continue = skip current iteration
+```
+
+## Confusion 7 - `%` operator kyu important hai?
+
+`%` remainder deta hai. Even/odd check mein ye very useful hai. Agar number ko 2 se divide karne par remainder 0 hai, to number even hai. Agar remainder 1 hai, to number odd hai.
+
+```python
+number = 7
+print(number % 2)
+```
+
+Output:
+
+```text
+1
+```
+
+Since remainder 1 hai, number odd hai.
 
 ---
 
