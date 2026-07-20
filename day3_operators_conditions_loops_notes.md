@@ -1035,6 +1035,345 @@ Yahan stored grade output mein show hota hai. Isse students ko samajh aata hai k
 
 ---
 
+# Day 3 - Complete Code Explanation Appendix
+
+Is section mein Day 3 ke basic operator, condition, and loop code examples ko line-by-line simple Hinglish mein explain kiya gaya hai. Aap class mein code dikhane ke baad is section se directly explanation de sakte ho.
+
+## Appendix 1 - Arithmetic Operators Code
+
+```python
+a = 10
+b = 3
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Remainder:", a % b)
+print("Power:", a ** b)
+print("Floor Division:", a // b)
+```
+
+`a = 10` ek variable create karta hai jiska naam `a` hai. Is variable mein number 10 store hai. Hum is value ko calculations ke liye use karenge.
+
+`b = 3` doosra variable create karta hai. Isme number 3 store hai. Ab `a` and `b` dono numbers hain, so arithmetic operators apply kar sakte hain.
+
+`print("Addition:", a + b)` addition result print karta hai. `"Addition:"` label hai, and `a + b` calculation hai. Python pehle `10 + 3` solve karega, phir output print karega.
+
+`print("Subtraction:", a - b)` subtraction karta hai. `a - b` ka meaning hai 10 minus 3. Output mein label ke saath result show hota hai.
+
+`print("Multiplication:", a * b)` multiplication karta hai. Python mein `*` multiplication symbol hota hai. Yahan 10 multiplied by 3, result 30 hai.
+
+`print("Division:", a / b)` normal division karta hai. `/` operator decimal answer de sakta hai. Isliye output 3.3333 jaisa ho sakta hai.
+
+`print("Remainder:", a % b)` modulus operator use karta hai. `%` division ke baad remainder deta hai. 10 ko 3 se divide karne par remainder 1 hota hai.
+
+`print("Power:", a ** b)` power calculate karta hai. `a ** b` ka matlab 10 power 3, yani 10 * 10 * 10. Output 1000 hota hai.
+
+`print("Floor Division:", a // b)` floor division karta hai. Ye decimal part remove karke integer-style result deta hai. 10 // 3 ka result 3 hota hai.
+
+## Appendix 2 - Relational Operators Code
+
+```python
+marks = 75
+
+print(marks > 40)
+print(marks == 75)
+print(marks != 100)
+```
+
+`marks = 75` marks variable mein value 75 store karta hai. Ab hum is value ko compare karenge. Comparison ka result hamesha `True` ya `False` hota hai.
+
+`print(marks > 40)` check karta hai ki marks 40 se greater hain ya nahi. Since 75 greater than 40 hai, result `True` aayega. Ye pass/fail logic mein useful hai.
+
+`print(marks == 75)` equality check karta hai. Dhyan rahe `==` comparison ke liye hota hai, while `=` assignment ke liye hota hai. Yahan marks exactly 75 hain, so output `True`.
+
+`print(marks != 100)` not equal check karta hai. `!=` ka meaning hai equal nahi. Since marks 100 nahi hain, result `True` hoga.
+
+## Appendix 3 - Logical Operators Code
+
+```python
+age = 20
+has_id = True
+
+print(age >= 18 and has_id == True)
+print(age < 18 or has_id == True)
+print(not has_id)
+```
+
+`age = 20` user ki age store karta hai. Age number hai, so comparison possible hai. Is value ko eligibility check ke liye use karenge.
+
+`has_id = True` boolean value store karta hai. Iska meaning hai user ke paas ID hai. Boolean values condition checks mein useful hoti hain.
+
+`print(age >= 18 and has_id == True)` two conditions combine karta hai. `and` ka rule hai dono conditions true honi chahiye. Age 18 se zyada hai and ID true hai, so final result true.
+
+`print(age < 18 or has_id == True)` `or` operator use karta hai. `or` mein koi ek condition true ho to final result true hota hai. Yahan second condition true hai, so output true hai.
+
+`print(not has_id)` boolean value ko reverse karta hai. Since `has_id` true hai, `not has_id` false ho jayega. `not` ka use reverse logic ke liye hota hai.
+
+## Appendix 4 - Assignment Operators Code
+
+```python
+score = 10
+
+score += 5
+print(score)
+
+score -= 3
+print(score)
+
+score *= 2
+print(score)
+```
+
+`score = 10` score variable ko initial value deta hai. Starting score 10 hai. Baad mein hum same variable ko update karenge.
+
+`score += 5` ka full meaning hai `score = score + 5`. Old score 10 tha, usme 5 add hua, new score 15 ho gaya. Ye short form code ko clean banata hai.
+
+`print(score)` updated score print karta hai. Is point par output 15 hoga. Print se hum confirm kar sakte hain ki update successful hua.
+
+`score -= 3` ka full meaning hai `score = score - 3`. Current score 15 hai, minus 3 karne par 12 ho gaya. Same variable update hota hai.
+
+`print(score)` current score print karta hai. Output 12 hoga. Ye step-by-step value change observe karne ke liye useful hai.
+
+`score *= 2` ka full meaning hai `score = score * 2`. Current score 12 hai, double hone par 24 ho jata hai. Assignment operators repeated updates ke liye useful hote hain.
+
+`print(score)` final updated score print karta hai. Output 24 aayega. Is example se learners ko variable update ka concept clear hota hai.
+
+## Appendix 5 - Membership Operators Code
+
+```python
+students = ["Rahul", "Ayesha", "Priya"]
+
+print("Rahul" in students)
+print("Aman" in students)
+print("Aman" not in students)
+```
+
+`students = ["Rahul", "Ayesha", "Priya"]` ek list create karta hai jisme multiple student names store hain. List square brackets se banti hai. Is list mein hum membership check karenge.
+
+`print("Rahul" in students)` check karta hai ki `"Rahul"` list mein present hai ya nahi. Since Rahul list mein hai, output `True` hoga. `in` operator search jaisa kaam karta hai.
+
+`print("Aman" in students)` check karta hai ki Aman list mein hai ya nahi. Aman list mein nahi hai, so output `False` aayega. Ye attendance/search system ka basic logic hai.
+
+`print("Aman" not in students)` check karta hai ki Aman list mein nahi hai. Since Aman actually list mein nahi hai, result `True` hoga. `not in` negative membership check karta hai.
+
+## Appendix 6 - Identity Operators Code
+
+```python
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)
+print(a is c)
+print(a == c)
+```
+
+`a = [1, 2, 3]` ek list create karta hai and usko variable `a` mein store karta hai. Ye list memory mein ek object hoti hai. `a` us object ko refer karta hai.
+
+`b = a` ka matlab hai `b` bhi same list object ko refer karega. Yahan new list create nahi hui. `a` and `b` dono same object ki taraf point kar rahe hain.
+
+`c = [1, 2, 3]` ek new list object create karta hai. Values same hain, but object different hai. Isliye identity check mein difference aayega.
+
+`print(a is b)` check karta hai ki `a` and `b` same object hain ya nahi. Since `b = a` kiya tha, output `True` hoga.
+
+`print(a is c)` check karta hai ki `a` and `c` same object hain ya nahi. Values same hain, but object different hai, so output `False`.
+
+`print(a == c)` values compare karta hai. Since dono lists ke values same hain, output `True` hoga. Isse `is` and `==` ka difference clear hota hai.
+
+## Appendix 7 - Operator Precedence Code
+
+```python
+result = 10 + 5 * 2
+print(result)
+
+result2 = (10 + 5) * 2
+print(result2)
+```
+
+`result = 10 + 5 * 2` mein Python multiplication pehle solve karta hai. `5 * 2` pehle 10 hota hai, phir 10 + 10 = 20 hota hai. Ye operator precedence ka example hai.
+
+`print(result)` calculated result print karta hai. Output 20 hoga. Isse students ko samajh aata hai ki Python left-to-right blindly nahi chalta.
+
+`result2 = (10 + 5) * 2` mein brackets priority change kar dete hain. Python pehle bracket solve karega: 10 + 5 = 15. Phir 15 * 2 = 30.
+
+`print(result2)` second calculation ka result print karta hai. Output 30 hota hai. Brackets ka use expression ko clear and controlled banata hai.
+
+## Appendix 8 - if Statement Code
+
+```python
+marks = 75
+
+if marks >= 40:
+    print("Pass")
+```
+
+`marks = 75` marks variable mein number value store karta hai. Ye value condition mein check hogi. Marks ke basis par program decide karega pass print karna hai ya nahi.
+
+`if marks >= 40:` condition line hai. Python check karta hai ki marks 40 ya usse zyada hain. Colon `:` batata hai ki condition ke baad ek block start hone wala hai.
+
+`print("Pass")` if block ke andar hai. Indentation batata hai ki ye line condition ke under belongs karti hai. Condition true hai, so `Pass` print hoga.
+
+## Appendix 9 - if-else Code
+
+```python
+marks = 35
+
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+`marks = 35` marks variable mein 35 store karta hai. Ye value passing marks se kam hai. Program ab condition ke basis par decision lega.
+
+`if marks >= 40:` check karta hai ki marks 40 ya usse zyada hain ya nahi. Since 35 less than 40 hai, condition false hogi. If block skip ho jayega.
+
+`print("Pass")` sirf tab execute hota jab condition true hoti. Yahan condition false hai, so ye line run nahi hogi.
+
+`else:` alternative block start karta hai. Else ka matlab hai agar if condition false ho, to ye block execute karo. Else ke saath condition nahi likhte.
+
+`print("Fail")` else block ke andar hai. Since marks 35 hain, output `Fail` hoga. Isse decision making ka basic flow clear hota hai.
+
+## Appendix 10 - if-elif-else Grade Code
+
+```python
+marks = 82
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 60:
+    print("Grade C")
+else:
+    print("Needs Improvement")
+```
+
+`marks = 82` marks variable mein 82 store karta hai. Python isi value ko multiple conditions ke against check karega. Top to bottom checking hogi.
+
+`if marks >= 90:` first condition hai. Python pehle highest grade check karta hai. 82 >= 90 false hai, so Python next condition par chala jata hai.
+
+`print("Grade A")` sirf tab run hota jab marks 90 ya usse zyada hote. Yahan ye line skip hogi. Indentation batata hai ki ye if block ka part hai.
+
+`elif marks >= 75:` second condition hai. 82 >= 75 true hai, so ye block execute hoga. `elif` multiple conditions ke liye use hota hai.
+
+`print("Grade B")` output print karta hai. Since second condition true hai, Grade B print hoga. Iske baad Python baaki elif/else skip kar deta hai.
+
+`elif marks >= 60:` third condition hai, but yahan tak program nahi aayega because previous condition true ho chuki hai. Ye lower grade range ke liye hoti.
+
+`else:` fallback block hai. Agar koi bhi condition true nahi hoti, tab else run hota. Yahan else run nahi hoga.
+
+## Appendix 11 - Nested Condition Code
+
+```python
+age = 20
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+    else:
+        print("ID required")
+else:
+    print("Under age")
+```
+
+`age = 20` user ki age store karta hai. Pehli condition age ke basis par check hogi. Agar age 18 se kam hoti, program directly under age bolta.
+
+`has_id = True` boolean variable hai jo batata hai ki user ke paas ID hai. Ye second level condition mein use hoga. Boolean directly condition mein use ho sakta hai.
+
+`if age >= 18:` outer condition hai. Pehle age check hoti hai. Since age 20 hai, condition true hai and program inner condition ke andar jayega.
+
+`if has_id:` inner condition hai. Ye tabhi check hoti hai jab outer condition true ho. Since `has_id` true hai, entry allowed print hoga.
+
+`print("Entry allowed")` inner if block ke andar hai. Age bhi valid hai and ID bhi present hai, so final output entry allowed.
+
+`else: print("ID required")` inner else hai. Agar age valid hoti but ID false hoti, to ID required print hota. Ye nested decision ka second branch hai.
+
+`else: print("Under age")` outer else hai. Agar age 18 se kam hoti, ye block run hota. Isse nested condition ka layered decision flow clear hota hai.
+
+## Appendix 12 - for Loop Code
+
+```python
+for number in range(1, 6):
+    print(number)
+```
+
+`for number in range(1, 6):` loop start karta hai. `range(1, 6)` numbers 1 se 5 tak generate karta hai. Ending value 6 include nahi hoti.
+
+`number` loop variable hai. Har round mein `number` ki value change hoti hai. Pehle 1, phir 2, phir 3, phir 4, phir 5.
+
+`print(number)` loop ke andar hai because indentation hai. Ye line har round execute hoti hai. Isliye output mein 1 se 5 tak numbers print hote hain.
+
+## Appendix 13 - while Loop Code
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+`count = 1` starting value set karta hai. While loop ko start karne ke liye usually ek control variable chahiye hota hai. Yahan control variable `count` hai.
+
+`while count <= 5:` condition check karta hai. Jab tak count 5 ya usse kam hai, loop repeat hota rahega. Agar condition false ho jaaye, loop stop ho jayega.
+
+`print(count)` current count value print karta hai. Ye line loop ke har round mein execute hoti hai. Output 1, 2, 3, 4, 5 aayega.
+
+`count += 1` count ko har round mein increase karta hai. Ye line bahut important hai. Agar count increase nahi hoga, condition hamesha true rahegi and infinite loop ban sakta hai.
+
+## Appendix 14 - break Code
+
+```python
+for number in range(1, 10):
+    if number == 5:
+        break
+    print(number)
+```
+
+`for number in range(1, 10):` loop 1 se 9 tak numbers generate karta hai. Har round mein `number` ki value change hoti hai.
+
+`if number == 5:` check karta hai ki current number 5 hai ya nahi. Jab tak number 5 nahi hota, condition false rahegi.
+
+`break` loop ko immediately stop karta hai. Jab number 5 hota hai, break execute hota hai and loop se bahar aa jata hai. Isliye 5 print nahi hota.
+
+`print(number)` break se pehle wale numbers print karta hai. Output 1, 2, 3, 4 hota hai. Break ke baad loop continue nahi hota.
+
+## Appendix 15 - continue Code
+
+```python
+for number in range(1, 6):
+    if number == 3:
+        continue
+    print(number)
+```
+
+`for number in range(1, 6):` loop 1 se 5 tak chalega. Har round mein number value update hoti hai.
+
+`if number == 3:` check karta hai ki current number 3 hai ya nahi. Jab number 3 hota hai, condition true hoti hai.
+
+`continue` current round ko skip karta hai. Matlab number 3 ke liye neeche ka print execute nahi hoga. Program next loop round par chala jayega.
+
+`print(number)` numbers print karta hai except skipped number. Output 1, 2, 4, 5 hota hai. Continue loop ko stop nahi karta, sirf current iteration skip karta hai.
+
+## Appendix 16 - pass Code
+
+```python
+for number in range(1, 4):
+    pass
+```
+
+`for number in range(1, 4):` loop 1 se 3 tak chalne ke liye ready hota hai. Normally loop ke andar code likhna hota hai.
+
+`pass` ka matlab hai abhi kuch mat karo. Ye placeholder statement hai. Jab future mein code add karna ho but abhi block empty rakhna ho, tab `pass` useful hota hai.
+
+Without `pass`, Python empty block par error dega. Isliye `pass` code structure ko valid rakhta hai. Ye beginner ko samjhana zaroori hai ki `pass` output nahi deta, bas syntax complete karta hai.
+
+---
+
 # Day 3 Practice Questions
 
 1. User se age input lo. Agar age 18 ya zyada ho to eligible print karo, warna not eligible.

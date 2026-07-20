@@ -743,6 +743,172 @@ Yahan `total` obtained marks hai. `300` maximum marks hai. `* 100` percentage co
 
 ---
 
+# Day 2 - Complete Code Explanation Appendix
+
+Is section ka purpose yeh hai ki Day 2 document mein jo basic code examples diye gaye hain, unki har important line ko simple Hinglish mein detail se samjha diya jaye. Agar aap class mein padha rahe ho, to code dikhane ke baad is explanation ko directly use kar sakte ho.
+
+## Appendix 1 - Basic Variable Code
+
+```python
+name = "Rahul"
+age = 21
+city = "Delhi"
+course = "Python"
+```
+
+`name = "Rahul"` ka matlab hai humne `name` naam ka variable banaya. Is variable ke andar `"Rahul"` text store kiya. Quotes batate hain ki value string hai. Jab bhi hum code mein `name` use karenge, Python uske andar stored value ko refer karega.
+
+`age = 21` mein `age` naam ka variable create hota hai. Iske andar number `21` store hota hai. Yahan quotes nahi lagaye gaye, kyunki 21 text nahi, number hai. Agar future mein age par calculation karni ho, to number form useful hota hai.
+
+`city = "Delhi"` mein city ka naam text ke form mein store hota hai. City name string hai, isliye double quotes ke andar likha gaya hai. Variable ka naam meaningful hai, isliye code padhte hi samajh aa raha hai ki isme city store hai.
+
+`course = "Python"` mein course ka naam store kiya gaya hai. Ye bhi string value hai. Is tarah multiple values ko alag-alag variables mein store karke hum program ko organized bana sakte hain.
+
+## Appendix 2 - Printing Variables
+
+```python
+print(name)
+print(age)
+print(city)
+print(course)
+```
+
+`print(name)` variable `name` ke andar jo value stored hai, usko screen par show karta hai. Yahan quotes nahi lagaye gaye because hum actual word `name` print nahi karna chahte. Hum variable ki stored value print karna chahte hain.
+
+`print(age)` age variable ki value print karta hai. Since `age` mein 21 store hai, output mein 21 aayega. `print()` ka kaam value ko terminal/screen par display karna hai.
+
+`print(city)` city variable ki stored value show karta hai. Agar city variable mein `"Delhi"` hai, output `Delhi` hoga. Yahan bhi Python variable ke naam ko read karke uski value fetch karta hai.
+
+`print(course)` course variable ki value output mein show karta hai. Ye line batati hai ki ek baar value variable mein store ho jaaye, to hum usko baar-baar use kar sakte hain.
+
+## Appendix 3 - Variable Naming Code
+
+```python
+student_name = "Ayesha"
+student_age = 20
+total_marks = 450
+```
+
+`student_name = "Ayesha"` ek meaningful variable name ka example hai. `student_name` padhte hi samajh aa jata hai ki is variable mein student ka naam store hoga. Underscore spaces ki jagah use hota hai, kyunki Python variable name mein spaces allowed nahi hain.
+
+`student_age = 20` mein student ki age store ki gayi hai. Variable name letter se start ho raha hai, isliye valid hai. Value number hai, isliye quotes nahi lagaye gaye.
+
+`total_marks = 450` mein total marks store kiye gaye hain. Ye name clear hai and future calculation ke liye useful hai. Agar variable ka naam sirf `tm` rakhte, to beginner ko samajhne mein problem hoti.
+
+## Appendix 4 - Data Types Code
+
+```python
+age = 21
+price = 99.50
+name = "Rahul"
+is_student = True
+```
+
+`age = 21` integer data type ka example hai. Integer ka matlab whole number, jisme decimal point nahi hota. Age, count, quantity jaise values usually integer hoti hain.
+
+`price = 99.50` float data type ka example hai. Float ka matlab decimal number. Price, percentage, temperature jaise values decimal ho sakti hain, isliye float useful hota hai.
+
+`name = "Rahul"` string data type ka example hai. String text value hoti hai. Python mein string quotes ke andar likhi jaati hai, chahe single quotes ho ya double quotes.
+
+`is_student = True` boolean data type ka example hai. Boolean mein sirf two possible values hoti hain: `True` ya `False`. Yes/no, active/inactive, pass/fail jaise logic mein boolean useful hota hai.
+
+## Appendix 5 - Type Checking Code
+
+```python
+print(type(age))
+print(type(price))
+print(type(name))
+print(type(is_student))
+```
+
+`print(type(age))` pehle `type(age)` se age variable ka data type check karta hai. Phir `print()` us type ko screen par show karta hai. Agar age mein 21 hai, output `<class 'int'>` aayega.
+
+`print(type(price))` price variable ka type check karta hai. Since price mein decimal value hai, output `<class 'float'>` hoga. Isse learner ko confirm hota hai ki Python value ko decimal number samajh raha hai.
+
+`print(type(name))` name variable ka type check karta hai. Name text hai, so output `<class 'str'>` hoga. `str` ka full form string hai.
+
+`print(type(is_student))` boolean value ka type check karta hai. Since value `True` hai, output `<class 'bool'>` hoga. Ye line boolean concept ko practically show karti hai.
+
+## Appendix 6 - Input and Output Code
+
+```python
+name = input("Enter your name: ")
+city = input("Enter your city: ")
+
+print("Hello", name)
+print("You are from", city)
+```
+
+`name = input("Enter your name: ")` user ko prompt show karta hai. User jo naam type karega, woh `name` variable mein store ho jayega. `input()` se aane wali value by default string hoti hai.
+
+`city = input("Enter your city: ")` user se city input leta hai. Prompt ke andar jo text hai, woh user ko guide karta hai ki kya type karna hai. Good prompt program ko user-friendly banata hai.
+
+`print("Hello", name)` fixed text `"Hello"` and variable `name` dono ko print karta hai. Comma ka use karne se Python automatically space add kar deta hai. Output personal feel hota hai, jaise `Hello Rahul`.
+
+`print("You are from", city)` fixed sentence and city variable ko combine karta hai. Agar city Delhi hai, output `You are from Delhi` hoga. Ye dynamic output ka simple example hai.
+
+## Appendix 7 - Wrong Casting Example
+
+```python
+age = input("Enter your age: ")
+
+print(age + 1)
+```
+
+`age = input("Enter your age: ")` user se age input leta hai. Lekin important point yeh hai ki `input()` age ko string form mein store karta hai. Agar user 21 type kare, Python usko `"21"` text ki tarah treat karega.
+
+`print(age + 1)` error de sakta hai because yahan string and integer ko add karne ki koshish ho rahi hai. Python text `"21"` and number `1` ko directly add nahi kar sakta. Isi wajah se type casting required hoti hai.
+
+## Appendix 8 - Correct Casting Example
+
+```python
+age = input("Enter your age: ")
+age = int(age)
+
+print("Next year your age will be", age + 1)
+```
+
+`age = input("Enter your age: ")` user se age input leta hai, but value abhi string form mein hoti hai. Ye first step sirf data collect karta hai. Calculation ke liye value ready nahi hai.
+
+`age = int(age)` same age value ko integer mein convert karta hai. Left side wala `age` updated value store karta hai. Right side wala `int(age)` old string value ko number mein convert karta hai.
+
+`print("Next year your age will be", age + 1)` ab calculation safely kar sakta hai. Since age integer ban chuki hai, `age + 1` next year age calculate karta hai. Output readable sentence ke form mein print hota hai.
+
+## Appendix 9 - Comments Code
+
+```python
+# This program prints student details
+
+name = "Rahul"
+age = 21
+
+print(name)
+print(age)
+```
+
+`# This program prints student details` comment line hai. Python is line ko execute nahi karta. Comment ka purpose human reader ko batana hai ki program kya kar raha hai.
+
+`name = "Rahul"` normal variable assignment hai. Comment ke baad actual code start hota hai. Yahan student ka naam store kiya gaya hai.
+
+`age = 21` age variable mein number store karta hai. Ye value later output mein print hogi. Since age number hai, quotes nahi hain.
+
+`print(name)` name variable ki value screen par show karta hai. Comment execute nahi hua, but code line execute hoti hai.
+
+`print(age)` age variable ki value show karta hai. Is example se learners ko comments and executable code ka difference samajh aata hai.
+
+## Appendix 10 - Syntax Case-Sensitivity Code
+
+```python
+Message = "Welcome to Python"
+print(message)
+```
+
+`Message = "Welcome to Python"` mein variable ka naam capital `M` se start ho raha hai. Python is variable ko exactly `Message` naam se store karta hai. Python case-sensitive hai, matlab capital and small letters different hote hain.
+
+`print(message)` small `m` wale variable ko print karne ki koshish karta hai. Lekin code mein small `message` variable create hi nahi hua. Isliye Python error de sakta hai. Correct code mein variable name same hona chahiye: `print(Message)`.
+
+---
+
 # Day 2 Practice Questions
 
 1. Apna name, age, city, and goal input lo aur clean summary print karo.
