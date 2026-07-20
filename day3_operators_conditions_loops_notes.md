@@ -583,6 +583,27 @@ Grade: B
 
 Marks ke basis par Python top se conditions check karta hai. Agar marks 90 se zyada hote to grade A hota. Marks 82 hain, to first condition false, second condition true, isliye grade B assign hota hai.
 
+## Deep Line-by-Line Explanation
+
+| Code | Simple Hinglish Explanation |
+|---|---|
+| `student_name = input("Enter student name: ")` | Student ka naam input liya. Ye output report ko personal banata hai. |
+| `marks = float(input("Enter marks: "))` | Marks input liye and `float()` se number mein convert kiye. Marks decimal bhi ho sakte hain, jaise 82.5. |
+| `if marks >= 90:` | Python check karta hai kya marks 90 ya usse zyada hain. Agar haan, grade A milega. |
+| `grade = "A"` | Agar first condition true hoti, to `grade` variable mein `A` store hota. |
+| `elif marks >= 75:` | Agar first condition false hai, Python next condition check karta hai. `elif` ka meaning hai else-if. |
+| `grade = "B"` | Agar marks 75 ya usse zyada hain, to grade B assign hota hai. |
+| `elif marks >= 60:` | Agar marks 75 se kam hain, tab Python check karta hai kya marks 60 ya usse zyada hain. |
+| `elif marks >= 40:` | Ye pass range ke liye condition hai. |
+| `else:` | Agar upar ki koi condition true nahi hoti, to else block chalega. |
+| `grade = "Fail"` | Agar marks 40 se kam hain, student fail category mein jayega. |
+| `print("Result")` | Report ka heading print hota hai. |
+| `print("Grade:", grade)` | Jo grade condition ke basis par decide hua, woh final output mein print hota hai. |
+
+## Condition Flow Explanation
+
+Python conditions ko top to bottom check karta hai. Jaise marks 82 hain. Pehle check hota hai `marks >= 90`, ye false hai. Phir check hota hai `marks >= 75`, ye true hai. Jaise hi true condition milti hai, Python us block ko run karta hai and baaki `elif` conditions skip ho jaati hain. Isliye grade B print hota hai.
+
 ---
 
 # Chapter 16 - Practical 2: Multiplication Table
@@ -624,6 +645,27 @@ Enter a number: 5
 | 3 | `for i in range(1, 11):` | Loop 1 se 10 tak chalega. |
 | 4 | `number * i` | Har round mein multiplication hoti hai. |
 
+## Deep Line-by-Line Explanation
+
+| Code | Simple Hinglish Explanation |
+|---|---|
+| `number = int(input("Enter a number: "))` | User se table ka number input liya. Since multiplication karni hai, input ko `int()` se number banaya. |
+| `for i in range(1, 11):` | Ye loop `i` ko 1 se 10 tak values deta hai. `range(1, 11)` mein 11 include nahi hota. |
+| `print(number, "x", i, "=", number * i)` | Har loop round mein ek table line print hoti hai. Example: agar number 5 and i 3 hai, to output `5 x 3 = 15` hota hai. |
+
+## Loop Dry Run
+
+| Round | `i` Value | Calculation | Output |
+|---|---|---|---|
+| 1 | 1 | `5 * 1` | `5 x 1 = 5` |
+| 2 | 2 | `5 * 2` | `5 x 2 = 10` |
+| 3 | 3 | `5 * 3` | `5 x 3 = 15` |
+| 10 | 10 | `5 * 10` | `5 x 10 = 50` |
+
+## Teacher Style Explanation
+
+“Loop ka power yahan clearly dikhta hai. Agar loop nahi hota, to hume table ke liye 10 print lines likhni padti. Loop se same logic 10 baar repeat ho raha hai, but code short and clean hai.”
+
 ---
 
 # Chapter 17 - Pattern Program
@@ -654,6 +696,24 @@ for i in range(1, rows + 1):
 ## Explanation
 
 Loop 1 se 5 tak chalta hai. Har row mein `"*" * i` stars repeat karta hai. Jab `i = 1`, one star print hota hai. Jab `i = 5`, five stars print hote hain.
+
+## Deep Line-by-Line Explanation
+
+| Code | Simple Hinglish Explanation |
+|---|---|
+| `rows = 5` | Pattern mein total rows 5 set ki gayi hain. |
+| `for i in range(1, rows + 1):` | Loop 1 se 5 tak chalega. `rows + 1` isliye likha kyunki range ki ending value include nahi hoti. |
+| `print("*" * i)` | Python mein string ko number se multiply karne par string repeat hoti hai. Agar `i = 3`, to `"*" * 3` ka output `***` hota hai. |
+
+## Pattern Dry Run
+
+| Row | `i` Value | `"*" * i` | Output |
+|---|---|---|---|
+| 1 | 1 | `"*" * 1` | `*` |
+| 2 | 2 | `"*" * 2` | `**` |
+| 3 | 3 | `"*" * 3` | `***` |
+| 4 | 4 | `"*" * 4` | `****` |
+| 5 | 5 | `"*" * 5` | `*****` |
 
 ---
 
@@ -704,6 +764,23 @@ Enter a number: 7
 ## Teacher Style Explanation
 
 “Even/odd checker se students ko `%` operator ka real use samajh aata hai. Modulus operator remainder deta hai. Agar number ko 2 se divide karne par remainder 0 hai, to number even hai. Ye practical condition and operator dono ko connect karta hai.”
+
+## Extra Detail for Learners
+
+Even/odd logic ka core line ye hai:
+
+```python
+if number % 2 == 0:
+```
+
+Is line ko tod kar samjho. `number % 2` remainder nikalta hai. `== 0` check karta hai ki remainder zero hai ya nahi. Agar remainder zero hai, condition true. Agar true hai, even print hoga. Agar false hai, else block chalega and odd print hoga.
+
+Examples:
+
+```text
+10 % 2 = 0, so 10 even hai
+7 % 2 = 1, so 7 odd hai
+```
 
 ---
 
@@ -759,6 +836,25 @@ Invalid username or password
 
 “Real apps mein login system username and password dono check karta hai. Sirf username correct hona enough nahi hai, sirf password correct hona bhi enough nahi hai. Dono correct honge tabhi login successful hoga. Isi case mein `and` operator use hota hai.”
 
+## Extra Detail for Learners
+
+Is program ka most important part ye condition hai:
+
+```python
+if username == "admin" and password == "12345":
+```
+
+Yahan two comparisons ho rahe hain. First comparison username check karta hai. Second comparison password check karta hai. `and` ka rule hai ki dono conditions true honi chahiye. Agar username correct hai but password wrong hai, final result false hoga. Agar password correct hai but username wrong hai, final result false hoga. Dono correct honge tabhi login successful hoga.
+
+## Truth Table
+
+| Username Correct? | Password Correct? | Final Result |
+|---|---|---|
+| True | True | Login successful |
+| True | False | Invalid |
+| False | True | Invalid |
+| False | False | Invalid |
+
 ---
 
 # Chapter 20 - Practical 5: Sum of Numbers Using Loop
@@ -796,6 +892,19 @@ Sum of numbers from 1 to 10 is: 55
 ## Teacher Style Explanation
 
 “Total variable ko empty basket samjho. Starting mein basket mein 0 hai. Loop har number ko basket mein add karta jaata hai. End mein basket ke andar final sum hota hai.”
+
+## Dry Run Explanation
+
+| Round | `number` | Old `total` | `total += number` ke baad |
+|---|---|---|---|
+| 1 | 1 | 0 | 1 |
+| 2 | 2 | 1 | 3 |
+| 3 | 3 | 3 | 6 |
+| 4 | 4 | 6 | 10 |
+| 5 | 5 | 10 | 15 |
+| 10 | 10 | 45 | 55 |
+
+Is dry run se students ko samajh aata hai ki `total` variable har loop round mein update hota ja raha hai. `+=` ka matlab hai old value mein new value add karke same variable mein store karna.
 
 ---
 
@@ -835,6 +944,22 @@ Enter number of rows: 4
 ## Teacher Style Explanation
 
 “Pattern programs beginner ke liye thode challenging lag sakte hain, but ye logic building ke liye very useful hain. Har row mein stars ki count increase ho rahi hai. Isi se students ko loop variable ka role samajh aata hai.”
+
+## Extra Detail for Learners
+
+Is code mein user rows decide karta hai. Agar user 4 enter karta hai, loop 1 se 4 tak chalega. Har row mein star count row number ke equal hota hai. Python mein string multiplication possible hai:
+
+```python
+"*" * 4
+```
+
+Output:
+
+```text
+****
+```
+
+Yahi reason hai ki pattern program short code mein ban jata hai.
 
 ---
 
@@ -879,6 +1004,34 @@ for i in range(1, 11):
 ## Teacher Style Explanation
 
 “Ye mini project Day 3 ka combined practice hai. Pehla part condition use karta hai grade decide karne ke liye. Second part loop use karta hai multiplication table print karne ke liye. Isse students ko samajh aata hai ki real programs mein multiple concepts ek saath use hote hain.”
+
+## Mini Project Deep Explanation
+
+Is mini project ko two parts mein samjho. First part result system hai. User marks enter karta hai. Python `if-elif-else` chain se grade decide karta hai. Grade ko variable mein store kiya jata hai, phir report mein print kiya jata hai.
+
+Second part multiplication table hai. User ek number enter karta hai. `for` loop `range(1, 11)` ke through 1 se 10 tak repeat hota hai. Har round mein `number * i` calculate hota hai and table line print hoti hai.
+
+Important baat:
+
+```python
+grade = "B"
+```
+
+Yahan grade print nahi ho raha, sirf store ho raha hai. Later:
+
+```python
+print("Grade:", grade)
+```
+
+Yahan stored grade output mein show hota hai. Isse students ko samajh aata hai ki variable value ko pehle decide karke baad mein use kar sakte hain.
+
+## Mini Project Improvement Ideas
+
+1. Agar grade Fail ho, to message print karo: “Please practice again.”
+2. Agar grade A ho, to message print karo: “Excellent performance.”
+3. Table range user se input lo, jaise 1 to 20.
+4. Table ke baad even/odd bhi check karo.
+5. Final report mein student ka name, grade, and table number print karo.
 
 ---
 
