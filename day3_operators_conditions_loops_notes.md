@@ -1904,6 +1904,391 @@ This code does not print anything. It only shows how to keep a block valid when 
 
 ---
 
+# Day 3 - Screenshot Style Detailed Code Explanation
+
+Is section ka format screenshot jaisa rakha gaya hai. Har example mein pehle code diya hai, phir output diya hai, phir table mein har important line ko detail mein explain kiya gaya hai. Explanation simple Hinglish mein hai, taaki learner ko line ka kaam, reason, and output ka connection easily samajh aaye.
+
+---
+
+## Example 1 - Arithmetic Operators
+
+```python
+a = 10
+b = 3
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Remainder:", a % b)
+print("Power:", a ** b)
+print("Floor Division:", a // b)
+```
+
+## Output
+
+```text
+Addition: 13
+Subtraction: 7
+Multiplication: 30
+Division: 3.3333333333333335
+Remainder: 1
+Power: 1000
+Floor Division: 3
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `a = 10` | `a` naam ka variable banaya gaya hai. Is variable mein number `10` store hai. Variable use karne se value ko baar-baar directly likhne ki zaroorat nahi hoti. Aage ke calculations mein Python `a` ko read karega and uski value `10` use karega. |
+| 2 | `b = 3` | `b` naam ka second variable banaya gaya hai. Isme number `3` store hai. Ab program ke paas do numeric values hain: `a` and `b`. In dono values par addition, subtraction, multiplication, division jaise operations perform honge. |
+| 4 | `print("Addition:", a + b)` | Ye line addition ka result print karti hai. `"Addition:"` sirf output label hai, taaki result readable ho. `a + b` mein Python `10 + 3` calculate karta hai. Final output `Addition: 13` aata hai. |
+| 5 | `print("Subtraction:", a - b)` | Ye line subtraction perform karti hai. `a - b` ka matlab hai `10 - 3`. Python pehle calculation karta hai, phir label ke saath result print karta hai. Output `Subtraction: 7` hota hai. |
+| 6 | `print("Multiplication:", a * b)` | Python mein multiplication ke liye `*` use hota hai. Is line mein `a * b` ka matlab hai `10 * 3`. Result `30` hota hai. Ye line learner ko batati hai ki Python mein maths symbols thode different ho sakte hain. |
+| 7 | `print("Division:", a / b)` | `/` normal division operator hai. Ye decimal answer return kar sakta hai. `10 / 3` exact divide nahi hota, isliye output decimal form mein aata hai. Python division ka result by default float type ka hota hai. |
+| 8 | `print("Remainder:", a % b)` | `%` modulus operator hai, jo remainder deta hai. `10` ko `3` se divide karne par quotient 3 and remainder 1 hota hai. Isliye output `Remainder: 1` aata hai. Ye operator even/odd check karne mein bahut useful hota hai. |
+| 9 | `print("Power:", a ** b)` | `**` power operator hai. `a ** b` ka matlab hai `10` ki power `3`. Simple meaning: `10 * 10 * 10`. Output `1000` hota hai. |
+| 10 | `print("Floor Division:", a // b)` | `//` floor division operator hai. Ye division karta hai but decimal part remove kar deta hai. `10 // 3` ka exact answer 3.33 hota, but floor division sirf `3` return karta hai. |
+
+---
+
+## Example 2 - Relational Operators
+
+```python
+marks = 75
+
+print(marks > 40)
+print(marks == 75)
+print(marks != 100)
+```
+
+## Output
+
+```text
+True
+True
+True
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `marks = 75` | `marks` variable mein value `75` store ki gayi hai. Ye student marks ka example hai. Ab Python isi value ko alag-alag conditions ke saath compare karega. Comparison ka result hamesha `True` ya `False` hota hai. |
+| 3 | `print(marks > 40)` | Ye line check karti hai ki marks 40 se greater hain ya nahi. Since `75 > 40` true hai, output `True` aata hai. Is type ka comparison pass/fail logic mein use hota hai. |
+| 4 | `print(marks == 75)` | `==` equality comparison operator hai. Ye check karta hai ki marks exactly 75 ke equal hain ya nahi. Yahan marks 75 hi hain, so result `True` hai. Dhyan rahe `=` assignment hota hai and `==` comparison hota hai. |
+| 5 | `print(marks != 100)` | `!=` ka meaning hai “not equal to”. Ye line check karti hai ki marks 100 ke equal nahi hain. Since marks 75 hain, condition true hai. Output `True` aata hai. |
+
+---
+
+## Example 3 - Logical Operators
+
+```python
+age = 20
+has_id = True
+
+print(age >= 18 and has_id == True)
+print(age < 18 or has_id == True)
+print(not has_id)
+```
+
+## Output
+
+```text
+True
+True
+False
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `age = 20` | `age` variable mein user ki age store hai. Age numeric value hai, isliye comparison possible hai. Program age ke basis par eligibility check kar sakta hai. |
+| 2 | `has_id = True` | `has_id` boolean variable hai. Boolean ka matlab value sirf `True` ya `False` ho sakti hai. Yahan `True` ka meaning hai user ke paas ID available hai. |
+| 4 | `print(age >= 18 and has_id == True)` | `and` operator tabhi true hota hai jab dono conditions true hoti hain. Pehli condition check karti hai age 18 ya zyada hai. Doosri condition check karti hai ID present hai. Dono true hain, so output `True` aata hai. |
+| 5 | `print(age < 18 or has_id == True)` | `or` operator mein koi ek condition true ho to final result true hota hai. Yahan `age < 18` false hai, but `has_id == True` true hai. Since one condition true hai, output `True` aata hai. |
+| 6 | `print(not has_id)` | `not` operator value ko reverse karta hai. Since `has_id` currently `True` hai, `not has_id` `False` ban jaata hai. Iska use reverse logic mein hota hai. |
+
+---
+
+## Example 4 - if, elif, else Grade System
+
+```python
+marks = 82
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 60:
+    print("Grade C")
+else:
+    print("Needs Improvement")
+```
+
+## Output
+
+```text
+Grade B
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `marks = 82` | `marks` variable mein student ke marks store hain. Python isi value ko grade decide karne ke liye use karega. Since value 82 hai, output grade B hona chahiye. |
+| 3 | `if marks >= 90:` | Python sabse pehle highest grade condition check karta hai. Ye condition check karti hai ki marks 90 ya usse zyada hain ya nahi. Since 82, 90 se kam hai, ye condition false hoti hai. |
+| 4 | `print("Grade A")` | Ye line sirf tab run hoti jab first condition true hoti. Yahan first condition false hai, so Python is line ko skip karta hai. Isse learner ko block execution ka idea milta hai. |
+| 5 | `elif marks >= 75:` | `elif` ka matlab hai else-if. Agar previous condition false ho gayi, tab Python ye condition check karta hai. 82 greater than 75 hai, so ye condition true ho jaati hai. |
+| 6 | `print("Grade B")` | Since `marks >= 75` true hai, Python ye line run karta hai. Output `Grade B` print hota hai. Ek condition true milne ke baad Python baaki `elif` and `else` skip kar deta hai. |
+| 7 | `elif marks >= 60:` | Ye condition tab check hoti agar above conditions false hoti. Lekin yahan grade B wali condition already true ho gayi, so Python is line tak nahi aata. |
+| 9 | `else:` | `else` fallback block hai. Agar koi bhi condition true nahi hoti tab else run hota. Yahan else run nahi hota because Grade B already decide ho chuka hai. |
+
+---
+
+## Example 5 - Nested Conditions
+
+```python
+age = 20
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+    else:
+        print("ID required")
+else:
+    print("Under age")
+```
+
+## Output
+
+```text
+Entry allowed
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `age = 20` | User ki age `age` variable mein store hai. Pehla decision age ke basis par hoga. Agar age 18 se kam hoti, to user under age hota. |
+| 2 | `has_id = True` | Ye boolean variable batata hai ki user ke paas ID hai ya nahi. Yahan value `True` hai, so ID present hai. Ye check age valid hone ke baad use hoga. |
+| 4 | `if age >= 18:` | Ye outer condition hai. Python pehle check karta hai ki age 18 ya usse zyada hai. Since age 20 hai, condition true hai and Python inner condition ke andar jaata hai. |
+| 5 | `if has_id:` | Ye inner condition hai. Ye tabhi check hoti hai jab outer condition true ho. Since `has_id` true hai, Python entry allowed block run karega. |
+| 6 | `print("Entry allowed")` | Dono conditions true hain: age valid hai and ID available hai. Isliye output `Entry allowed` hota hai. Ye nested decision ka final success case hai. |
+| 7 | `else:` | Ye inner `else` hai. Agar age valid hoti but ID false hoti, to ye block run hota. Yahan ye run nahi hota because `has_id` true hai. |
+| 10 | `print("Under age")` | Ye outer else ka output hai. Agar age 18 se kam hoti, to Python directly `Under age` print karta. |
+
+---
+
+## Example 6 - for Loop and range()
+
+```python
+for number in range(1, 6):
+    print(number)
+```
+
+## Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `for number in range(1, 6):` | `for` loop repeated work ke liye use hota hai. `range(1, 6)` numbers 1 se 5 tak generate karta hai. Ending value 6 include nahi hoti. Har round mein `number` variable ki value change hoti hai. |
+| 2 | `print(number)` | Ye line loop ke andar hai because ye indented hai. Isliye ye line har loop round mein execute hoti hai. Pehle `number` 1 hota hai, phir 2, phir 3, phir 4, phir 5. Output mein ye values line by line print hoti hain. |
+
+---
+
+## Example 7 - while Loop
+
+```python
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+```
+
+## Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `count = 1` | `count` loop control variable hai. Iski starting value 1 rakhi gayi hai. While loop isi value ko check karke decide karega ki loop chalna chahiye ya stop hona chahiye. |
+| 3 | `while count <= 5:` | Ye condition-based loop hai. Jab tak `count` 5 ya usse kam hai, loop repeat hota rahega. Jaise hi count 6 hoga, condition false hogi and loop stop ho jayega. |
+| 4 | `print(count)` | Ye current count value print karta hai. Since ye loop ke andar hai, har round mein run hota hai. Output 1 se 5 tak print hota hai. |
+| 5 | `count += 1` | Ye line count ko har round mein 1 se increase karti hai. Ye bahut important line hai. Agar ye line nahi hogi, count 1 hi rahega and loop infinite ho sakta hai. |
+
+---
+
+## Example 8 - break, continue, pass
+
+```python
+for number in range(1, 10):
+    if number == 5:
+        break
+    print(number)
+```
+
+## Output
+
+```text
+1
+2
+3
+4
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `for number in range(1, 10):` | Ye loop numbers 1 se 9 tak generate karta hai. Har round mein `number` ki value next number ban jaati hai. Loop normally 9 tak ja sakta tha. |
+| 2 | `if number == 5:` | Ye condition check karti hai ki current number 5 hai ya nahi. Jab number 1, 2, 3, 4 hota hai, condition false hoti hai. Jab number 5 hota hai, condition true hoti hai. |
+| 3 | `break` | `break` loop ko turant stop kar deta hai. Jaise hi number 5 hota hai, break execute hota hai and loop ke bahar aa jaata hai. Isliye 5 print nahi hota. |
+| 4 | `print(number)` | Ye line number print karti hai. Lekin agar break execute ho gaya, to Python is print line tak nahi pahunchta. Isliye output sirf 1, 2, 3, 4 hota hai. |
+
+---
+
+## Example 9 - Even or Odd Checker
+
+```python
+number = int(input("Enter a number: "))
+
+if number % 2 == 0:
+    print(number, "is even")
+else:
+    print(number, "is odd")
+```
+
+## Output
+
+```text
+Enter a number: 7
+7 is odd
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `number = int(input("Enter a number: "))` | User se number input liya ja raha hai. `input()` value ko string form mein leta hai, isliye `int()` use karke usko number mein convert kiya gaya. Agar conversion nahi karenge, modulus calculation properly nahi hogi. |
+| 3 | `if number % 2 == 0:` | `%` remainder operator hai. Ye line check karti hai ki number ko 2 se divide karne par remainder 0 hai ya nahi. Agar remainder 0 hai, number even hota hai. |
+| 4 | `print(number, "is even")` | Ye line tab run hoti hai jab condition true hoti hai. Matlab number 2 se completely divide ho gaya. Output mein number ke saath `is even` print hota hai. |
+| 5 | `else:` | Agar if condition false ho, to else block run hota hai. Else ka matlab hai: “agar number even nahi hai, to odd hoga.” |
+| 6 | `print(number, "is odd")` | Ye line odd case mein run hoti hai. Example mein 7 ko 2 se divide karne par remainder 1 aata hai, so output `7 is odd` hota hai. |
+
+---
+
+## Example 10 - Login System
+
+```python
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin" and password == "12345":
+    print("Login successful")
+else:
+    print("Invalid username or password")
+```
+
+## Output
+
+```text
+Enter username: admin
+Enter password: 12345
+Login successful
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `username = input("Enter username: ")` | User se username input liya ja raha hai. Jo user type karega woh `username` variable mein store hoga. Username text hota hai, isliye direct input enough hai. |
+| 2 | `password = input("Enter password: ")` | User se password input liya ja raha hai. Password bhi string form mein store hota hai. Real apps mein password hidden hota hai, but beginner Python terminal mein normal text dikhta hai. |
+| 4 | `if username == "admin" and password == "12345":` | Ye line do conditions check karti hai. First condition username ko `"admin"` se compare karti hai. Second condition password ko `"12345"` se compare karti hai. `and` ka matlab hai dono correct hone chahiye. |
+| 5 | `print("Login successful")` | Ye line sirf tab run hoti hai jab username and password dono correct hote hain. Agar dono conditions true hain, login successful output aata hai. |
+| 6 | `else:` | Agar username ya password mein se koi bhi wrong hai, if condition false ho jaati hai. Tab else block run hota hai. |
+| 7 | `print("Invalid username or password")` | Ye error message print karta hai. Isse user ko pata chalta hai ki login details correct nahi hain. |
+
+---
+
+## Example 11 - Sum of Numbers
+
+```python
+total = 0
+
+for number in range(1, 11):
+    total += number
+
+print("Sum of numbers from 1 to 10 is:", total)
+```
+
+## Output
+
+```text
+Sum of numbers from 1 to 10 is: 55
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `total = 0` | `total` variable starting mein 0 rakha gaya hai. Isko empty basket samjho. Loop ke through numbers ek-ek karke isi total mein add honge. |
+| 3 | `for number in range(1, 11):` | Ye loop 1 se 10 tak numbers generate karta hai. Ending value 11 include nahi hoti. Har round mein `number` ki value current number hoti hai. |
+| 4 | `total += number` | Ye line current number ko total mein add karti hai. `total += number` ka meaning hai `total = total + number`. Har round mein total update hota rahta hai. |
+| 6 | `print("Sum of numbers from 1 to 10 is:", total)` | Loop complete hone ke baad final total print hota hai. 1 se 10 tak numbers ka sum 55 hota hai. Ye line result ko readable sentence ke saath show karti hai. |
+
+---
+
+## Example 12 - Star Pattern
+
+```python
+rows = int(input("Enter number of rows: "))
+
+for row in range(1, rows + 1):
+    print("*" * row)
+```
+
+## Output
+
+```text
+Enter number of rows: 4
+*
+**
+***
+****
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `rows = int(input("Enter number of rows: "))` | User se rows input li ja rahi hai. Since rows count number hota hai, `int()` use karke input ko integer mein convert kiya gaya. Agar user 4 enter karega, pattern 4 rows ka banega. |
+| 3 | `for row in range(1, rows + 1):` | Loop 1 se user ke rows number tak chalega. `rows + 1` isliye likha because range ending value include nahi karti. Agar rows 4 hai, range 1 se 4 tak chalega. |
+| 4 | `print("*" * row)` | Python string multiplication allow karta hai. `"*" * row` ka matlab star ko row value ke according repeat karo. Row 1 par one star, row 2 par two stars, row 3 par three stars print honge. |
+
+---
+
 # Day 3 Practice Questions
 
 1. User se age input lo. Agar age 18 ya zyada ho to eligible print karo, warna not eligible.
