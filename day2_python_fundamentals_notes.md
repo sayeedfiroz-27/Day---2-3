@@ -1,66 +1,37 @@
 # Day 2 - Python Fundamentals
 
-Variables, Naming Rules, Data Types, Type Casting, Input/Output, Comments, Basic Syntax, and Practice Programs
+## Topics Covered
 
-Yeh notes beginner learners ke liye simple Hinglish mein banaye gaye hain. Aap isko directly class mein padhkar explain kar sakte ho. Har topic mein pehle simple meaning hai, phir real-life example, phir code, phir output, phir line-by-line explanation.
+Variables in Python, Naming Rules, Data Types, Type Casting, Input and Output Handling, Comments in Python, Basic Python Syntax, and Basic Programming Practice.
 
----
-
-## Day 2 Ka Main Goal
-
-Day 1 mein humne samjha tha ki programming ka matlab computer ko step-by-step instructions dena hota hai. Humne Python ka introduction dekha, first program run kiya, `print()` se output show kiya, `input()` se user se value li, aur variables ka basic taste liya.
-
-Day 2 mein hum Python ke basic building blocks ko detail mein samjhenge. Aaj ke topics hain: variables, variable naming rules, data types, type checking, type casting, input and output handling, comments, basic syntax, and small practice programs.
-
-Simple language mein bolo to aaj hum yeh seekhenge ki Python mein data ko store kaise karte hain, data ka type kaise samajhte hain, user se value kaise lete hain, output clean format mein kaise print karte hain, aur code ko readable kaise banate hain.
+Yeh document fresh format mein banaya gaya hai. Har topic ko individually explain kiya gaya hai. Pehle topic ka meaning hai, phir kyu use karte hain, kya fayda hai, phir practical code, output, aur uske baad har code line ka simple Hinglish explanation diya gaya hai.
 
 ---
 
-## Chapter Index - Aaj Kya Kya Seekhoge
+# 1. Variables in Python
 
-| Chapter | Topic | Simple Meaning |
-|---|---|---|
-| 1 | Variables | Value ko naam dekar store karna |
-| 2 | Naming Rules | Variable ka naam sahi tarike se likhna |
-| 3 | Data Types | Data kis type ka hai: number, decimal, text, true/false |
-| 4 | Type Checking | `type()` se data type check karna |
-| 5 | Type Casting | Ek type ko doosre type mein convert karna |
-| 6 | Input and Output | User se value lena aur result print karna |
-| 7 | Comments | Code ke andar notes likhna |
-| 8 | Basic Syntax | Python code likhne ke basic rules |
-| 9 | Practical | Student profile and marks calculator |
+## Topic Samjho
 
----
+Variable Python mein ek named container hota hai jisme hum data store karte hain. Simple language mein variable ek dabba hai jiske upar naam likha hota hai. Us dabbe ke andar value rakhi hoti hai. Jaise `name` dabbe ke andar `"Rahul"` rakha ho sakta hai, aur `age` dabbe ke andar `21` rakha ho sakta hai.
 
-# Chapter 1 - Variables
+## Kyu Use Karte Hain?
 
-## Variable Kya Hota Hai?
+Variables isliye use karte hain kyunki program mein values ko baar-baar use karna hota hai. Agar value ko ek naam de diya, to hum us naam ko code mein kahin bhi use kar sakte hain. Isse code clean, readable, aur manageable banta hai.
 
-Variable ek naam wala container hota hai jisme hum value store karte hain. Aap variable ko ek labelled box ki tarah samjho. Box ke upar naam likha hota hai, aur box ke andar value hoti hai.
+## Fayda
 
-Real-life example dekho. Agar class mein ek student ka naam, age, city, aur course store karna hai, to hum Python mein variables bana sakte hain.
+Variables se data store karna easy hota hai. Agar value change karni ho to ek jagah change kar sakte hain. Real applications mein user name, price, marks, email, city, password, total amount, percentage jaise data variables mein hi store hote hain.
+
+## Practical Code
 
 ```python
-name = "Rahul"
-age = 21
-city = "Delhi"
-course = "Python"
-```
+student_name = "Rahul"
+student_age = 21
+course_name = "Python"
 
-Yahan `name`, `age`, `city`, aur `course` variables hain. In variables ke andar values store hain.
-
-## Code
-
-```python
-name = "Rahul"
-age = 21
-city = "Delhi"
-course = "Python"
-
-print(name)
-print(age)
-print(city)
-print(course)
+print(student_name)
+print(student_age)
+print(course_name)
 ```
 
 ## Output
@@ -68,56 +39,45 @@ print(course)
 ```text
 Rahul
 21
-Delhi
 Python
 ```
 
-## Line-by-Line Explanation
+## Detailed Code Explanation
 
 | Line | Code | Explanation |
 |---|---|---|
-| 1 | `name = "Rahul"` | `name` variable mein text value `Rahul` store ki. |
-| 2 | `age = 21` | `age` variable mein number value `21` store ki. |
-| 3 | `city = "Delhi"` | `city` variable mein text value `Delhi` store ki. |
-| 4 | `course = "Python"` | `course` variable mein text value `Python` store ki. |
-| 6 | `print(name)` | `name` variable ki value print hoti hai. |
-| 7 | `print(age)` | `age` variable ki value print hoti hai. |
-
-## Teacher Style Explanation
-
-Learners ko aise samjhao:
-
-“Variable ek box hai. Agar box ka naam `name` hai aur uske andar `Rahul` rakha hai, to jab bhi hum `name` print karenge, output mein `Rahul` aayega. Variable ka benefit yeh hai ki value ko baar-baar manually likhne ki zaroorat nahi hoti. Hum value ko ek naam de dete hain aur us naam ko code mein use karte hain.”
+| 1 | `student_name = "Rahul"` | Is line mein `student_name` naam ka variable banaya gaya hai. Is variable ke andar `"Rahul"` text value store ki gayi hai. Quotes batate hain ki value string/text hai. Jab bhi hum `student_name` print karenge, Python uske andar stored value `Rahul` show karega. |
+| 2 | `student_age = 21` | Is line mein `student_age` variable banaya gaya hai. Iske andar number `21` store hai. Yahan quotes nahi hain kyunki age number hai. Agar future mein age par calculation karni ho, to number form useful hota hai. |
+| 3 | `course_name = "Python"` | Is line mein course ka naam store kiya gaya hai. `course_name` meaningful variable name hai, isliye code padhte hi samajh aa jata hai ki isme course ka naam hai. Text value quotes mein likhi gayi hai. |
+| 5 | `print(student_name)` | Ye line `student_name` variable ki value screen par print karti hai. Yahan quotes nahi lagaye kyunki hume word `student_name` print nahi karna, balki us variable ke andar jo value hai woh print karni hai. |
+| 6 | `print(student_age)` | Ye line age variable ki value print karti hai. Output mein `21` aata hai. Print function variable ke andar stored value ko terminal par show karta hai. |
+| 7 | `print(course_name)` | Ye line course name print karti hai. Since `course_name` mein `"Python"` store hai, output `Python` hota hai. |
 
 ---
 
-# Chapter 2 - Variable Naming Rules
+# 2. Naming Rules
 
-## Naming Rules Kyu Important Hain?
+## Topic Samjho
 
-Variable ka naam random nahi rakhna chahiye. Python ke kuch rules hote hain. Agar rule follow nahi karoge, to error aayega. Agar naam confusing rakhoge, to code difficult ho jayega.
+Naming rules ka matlab hai Python mein variable ka naam kaise likhna chahiye. Variable ka naam random ya invalid nahi hona chahiye. Python kuch names accept karta hai aur kuch names par error deta hai.
 
-Good variable names code ko readable banate hain. Jab koi doosra person code padhe, usko samajh aana chahiye ki variable kis value ke liye use ho raha hai.
+## Kyu Use Karte Hain?
 
-## Important Rules
+Naming rules follow karna zaroori hai kyunki agar variable name invalid hua to program run hi nahi hoga. Meaningful names use karne se code padhna easy hota hai. Professional coding mein readable names bahut important hote hain.
 
-| Rule | Correct Example | Wrong Example |
-|---|---|---|
-| Name letter ya underscore se start ho sakta hai | `student_name` | `1student` |
-| Spaces allowed nahi hain | `student_age` | `student age` |
-| Special symbols allowed nahi hain | `total_marks` | `total@marks` |
-| Python keywords use nahi kar sakte | `student_class` | `class` |
-| Names case-sensitive hote hain | `Name` and `name` different hain | Same nahi hain |
+## Fayda
 
-## Code
+Good variable names se code self-explanatory hota hai. Example: `total_marks` dekhte hi samajh aata hai ki isme marks ka total hai. Agar hum sirf `x` likhen, to beginner ko samajh nahi aayega ki variable ka purpose kya hai.
+
+## Practical Code
 
 ```python
 student_name = "Ayesha"
-student_age = 20
+student_city = "Delhi"
 total_marks = 450
 
 print(student_name)
-print(student_age)
+print(student_city)
 print(total_marks)
 ```
 
@@ -125,87 +85,49 @@ print(total_marks)
 
 ```text
 Ayesha
-20
+Delhi
 450
 ```
 
-## Teacher Style Explanation
-
-“Python mein variable names meaningful rakho. Agar aap `x`, `y`, `z` use karoge, code chalega, but samajhna difficult hoga. Agar aap `student_name`, `total_marks`, `daily_hours` use karoge, to code self-explanatory banega. Professional coding mein readable code bahut important hota hai.”
-
----
-
-# Chapter 3 - Data Types
-
-## Data Type Kya Hota Hai?
-
-Data type batata hai ki value kis kind ki hai. Python ko yeh samajhna hota hai ki value number hai, decimal hai, text hai, ya true/false value hai.
-
-Day 2 mein hum four basic data types samjhenge: `int`, `float`, `str`, and `bool`.
-
-| Data Type | Meaning | Example |
-|---|---|---|
-| `int` | Whole number | `10`, `21`, `500` |
-| `float` | Decimal number | `10.5`, `99.99`, `3.14` |
-| `str` | Text/String | `"Rahul"`, `"Python"` |
-| `bool` | True/False | `True`, `False` |
-
-## Code
-
-```python
-age = 21
-price = 99.50
-name = "Rahul"
-is_student = True
-
-print(age)
-print(price)
-print(name)
-print(is_student)
-```
-
-## Output
-
-```text
-21
-99.5
-Rahul
-True
-```
-
-## Line-by-Line Explanation
+## Detailed Code Explanation
 
 | Line | Code | Explanation |
 |---|---|---|
-| 1 | `age = 21` | `21` whole number hai, iska type `int` hai. |
-| 2 | `price = 99.50` | Decimal number hai, iska type `float` hai. |
-| 3 | `name = "Rahul"` | Quotes ke andar text hai, iska type `str` hai. |
-| 4 | `is_student = True` | True/False value hai, iska type `bool` hai. |
-
-## Teacher Style Explanation
-
-“Data type ko value ka nature samjho. Agar value count karne wali whole number hai, to `int`. Agar decimal hai, to `float`. Agar text hai, to `str`. Agar answer yes/no ya true/false type hai, to `bool`. Python automatically data type detect kar leta hai, lekin programmer ko samajhna zaroori hai.”
+| 1 | `student_name = "Ayesha"` | `student_name` valid variable name hai kyunki isme space nahi hai. Space ki jagah underscore `_` use hua hai. Is variable mein student ka naam store hai. Ye naam readable hai, isliye purpose clear hai. |
+| 2 | `student_city = "Delhi"` | Ye variable student ki city store karta hai. Naam meaningful hai, isliye code padhne wale ko samajh aata hai ki yeh city ke liye hai. Text value quotes mein hai. |
+| 3 | `total_marks = 450` | Is variable mein marks ka total store hai. Variable number se start nahi ho raha, isliye valid hai. Value number hai, isliye quotes nahi lagaye gaye. |
+| 5 | `print(student_name)` | Student name variable ki value print hoti hai. Output `Ayesha` aata hai. |
+| 6 | `print(student_city)` | City variable ki value print hoti hai. Output `Delhi` aata hai. |
+| 7 | `print(total_marks)` | Total marks print hote hain. Output `450` aata hai. |
 
 ---
 
-# Chapter 4 - Type Checking Using `type()`
+# 3. Data Types (int, float, str, bool)
 
-## `type()` Kya Karta Hai?
+## Topic Samjho
 
-`type()` Python ka built-in function hai jo kisi value ya variable ka data type batata hai. Beginner ke liye `type()` bahut useful hai, kyunki isse hum confirm kar sakte hain ki Python value ko kis type ka samajh raha hai.
+Data type batata hai ki value kis type ki hai. Python mein common data types hain `int`, `float`, `str`, and `bool`. `int` whole number ke liye, `float` decimal number ke liye, `str` text ke liye, aur `bool` True/False ke liye use hota hai.
 
-## Code
+## Kyu Use Karte Hain?
+
+Data types isliye important hain kyunki Python ko pata hona chahiye ki value ke saath kya operation possible hai. Number par calculation hoti hai, text par string operations hote hain, aur boolean values conditions mein use hoti hain.
+
+## Fayda
+
+Data types samajhne se errors kam hote hain. Agar aapko pata hai input string hota hai, to calculation se pehle type casting karoge. Agar value text hai, to quotes use karoge. Isse code sahi chalega.
+
+## Practical Code
 
 ```python
 age = 21
-price = 99.50
+percentage = 85.5
 name = "Rahul"
-is_student = True
+is_pass = True
 
 print(type(age))
-print(type(price))
+print(type(percentage))
 print(type(name))
-print(type(is_student))
+print(type(is_pass))
 ```
 
 ## Output
@@ -217,21 +139,76 @@ print(type(is_student))
 <class 'bool'>
 ```
 
-## Explanation
+## Detailed Code Explanation
 
-Yahan `type(age)` output deta hai `<class 'int'>`, kyunki `age` mein whole number store hai. `type(price)` output deta hai `<class 'float'>`, kyunki price decimal number hai. `type(name)` output deta hai `<class 'str'>`, kyunki name text hai. `type(is_student)` output deta hai `<class 'bool'>`, kyunki value `True` hai.
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `age = 21` | `age` variable mein whole number store hai. Whole number ka data type `int` hota hai. Age, quantity, count jaise values usually integer hoti hain. |
+| 2 | `percentage = 85.5` | Percentage decimal value hai. Decimal number ka data type `float` hota hai. Marks percentage, price, temperature jaise values float ho sakti hain. |
+| 3 | `name = "Rahul"` | Name text value hai, isliye quotes mein likha gaya hai. Text ka data type `str` hota hai. `str` ka full form string hai. |
+| 4 | `is_pass = True` | `True` boolean value hai. Boolean ka data type `bool` hota hai. Conditions mein `True` and `False` values bahut useful hoti hain. |
+| 6 | `print(type(age))` | `type(age)` Python se poochta hai ki age ka data type kya hai. `print()` us type ko screen par show karta hai. Output `<class 'int'>` hota hai. |
+| 7 | `print(type(percentage))` | Ye line percentage variable ka type check karti hai. Since value decimal hai, output `<class 'float'>` hota hai. |
+| 8 | `print(type(name))` | Ye line name variable ka type check karti hai. Since name text hai, output `<class 'str'>` hota hai. |
+| 9 | `print(type(is_pass))` | Ye line boolean variable ka type check karti hai. Since value `True` hai, output `<class 'bool'>` hota hai. |
 
 ---
 
-# Chapter 5 - Input and Output
+# 4. Type Casting
 
-## Input Kya Hota Hai?
+## Topic Samjho
 
-Input ka matlab user se value lena. Python mein input lene ke liye `input()` function use hota hai. Jab program run hota hai, `input()` user ko message show karta hai aur user keyboard se value type karta hai.
+Type casting ka matlab hota hai ek data type ko doosre data type mein convert karna. Example: string `"21"` ko integer `21` mein convert karna. Python mein `int()`, `float()`, `str()`, and `bool()` casting ke liye use hote hain.
 
-Important baat: `input()` se jo value aati hai, woh by default string hoti hai. Matlab agar user `20` type kare, Python usko text `"20"` ki tarah treat karta hai, number `20` ki tarah nahi.
+## Kyu Use Karte Hain?
 
-## Code
+Type casting mostly input ke saath use hoti hai. `input()` function user se value string form mein leta hai. Agar hume calculation karni hai, to us string ko number mein convert karna padta hai.
+
+## Fayda
+
+Type casting se calculations possible hoti hain. Agar user age ya marks enter karta hai, woh pehle string hota hai. `int()` ya `float()` se convert karne ke baad hi addition, subtraction, percentage, bill calculation possible hota hai.
+
+## Practical Code
+
+```python
+age = input("Enter your age: ")
+age = int(age)
+
+print("Next year your age will be", age + 1)
+```
+
+## Output
+
+```text
+Enter your age: 21
+Next year your age will be 22
+```
+
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `age = input("Enter your age: ")` | Ye line user se age input leti hai. `input()` ke andar jo message hai woh user ko screen par dikhta hai. User jo value type karta hai woh `age` variable mein store hoti hai. Important: yeh value abhi string form mein hoti hai. |
+| 2 | `age = int(age)` | Is line mein string age ko integer mein convert kiya gaya hai. Right side wala `int(age)` old string value ko number banata hai. Left side wala `age` same variable ko updated integer value ke saath store karta hai. |
+| 4 | `print("Next year your age will be", age + 1)` | Ab age number ban chuki hai, isliye `age + 1` calculation possible hai. Python next year age calculate karta hai. Print function sentence aur result ko ek saath show karta hai. |
+
+---
+
+# 5. Input and Output Handling
+
+## Topic Samjho
+
+Input ka matlab user se data lena. Output ka matlab screen par result show karna. Python mein input ke liye `input()` and output ke liye `print()` use hota hai.
+
+## Kyu Use Karte Hain?
+
+Real programs user ke data par kaam karte hain. Jaise name, city, marks, price, password user enter karta hai. Program us data ko process karta hai and output show karta hai.
+
+## Fayda
+
+Input-output se program interactive banta hai. Program fixed nahi rehta. Har user apni value enter kar sakta hai aur output uske according change hota hai.
+
+## Practical Code
 
 ```python
 name = input("Enter your name: ")
@@ -250,682 +227,143 @@ Hello Rahul
 You are from Delhi
 ```
 
-## Teacher Style Explanation
+## Detailed Code Explanation
 
-“Input user se data lene ka way hai. Real applications mein forms hote hain: name, email, password, city, phone number. Python mein beginner level par hum `input()` se same idea samajhte hain. User jo value type karega, woh variable mein store hogi, phir hum us variable ko program mein use kar sakte hain.”
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `name = input("Enter your name: ")` | Program user se name poochta hai. User jo naam type karega woh `name` variable mein store hoga. Prompt clear hai, isliye user ko pata hai kya enter karna hai. |
+| 2 | `city = input("Enter your city: ")` | Program user se city poochta hai. City bhi text value hoti hai, isliye direct input store kar sakte hain. |
+| 4 | `print("Hello", name)` | Ye line greeting print karti hai. Fixed text `"Hello"` and variable `name` ek saath print hote hain. Comma automatically space add karta hai. |
+| 5 | `print("You are from", city)` | Ye line user ki city ke saath sentence print karti hai. Output user input ke according change hota hai. |
 
 ---
 
-# Chapter 6 - Type Casting
+# 6. Comments in Python
 
-## Type Casting Kya Hota Hai?
+## Topic Samjho
 
-Type casting ka matlab ek data type ko doosre data type mein convert karna. Ye especially input ke saath important hai, kyunki `input()` by default string value deta hai.
+Comment code ke andar note hota hai. Python comment ko execute nahi karta. Comment ka use code explain karne ke liye hota hai.
 
-Agar user se age input lete hain aur us age par calculation karni hai, to age ko `int` mein convert karna padega.
+## Kyu Use Karte Hain?
 
-## Problem Without Type Casting
+Comments isliye use karte hain taaki future mein code samajhna easy ho. Jab code bada hota hai, comments help karte hain ki kaunsa part kis kaam ke liye hai.
 
-```python
-age = input("Enter your age: ")
+## Fayda
 
-print(age + 1)
-```
+Comments se code readable hota hai. Team project mein doosre developers ko bhi code ka purpose samajh aata hai. Beginners ke liye comments revision mein help karte hain.
 
-Yeh code error dega, kyunki `age` string hai aur hum string mein number add karne ki koshish kar rahe hain.
-
-## Correct Code With Type Casting
+## Practical Code
 
 ```python
-age = input("Enter your age: ")
-age = int(age)
+# This program prints student details
 
-print("Next year your age will be", age + 1)
+name = "Ayesha"
+course = "Python"
+
+print(name)
+print(course)
 ```
 
 ## Output
 
 ```text
-Enter your age: 21
-Next year your age will be 22
+Ayesha
+Python
 ```
 
-## Line-by-Line Explanation
+## Detailed Code Explanation
 
 | Line | Code | Explanation |
 |---|---|---|
-| 1 | `age = input(...)` | User se age input li, but value string form mein aayi. |
-| 2 | `age = int(age)` | String age ko integer mein convert kiya. |
-| 4 | `age + 1` | Ab calculation possible hai because age number ban chuki hai. |
-
-## Common Casting Functions
-
-| Function | Use |
-|---|---|
-| `int()` | Value ko whole number mein convert karta hai |
-| `float()` | Value ko decimal number mein convert karta hai |
-| `str()` | Value ko string/text mein convert karta hai |
-| `bool()` | Value ko boolean mein convert karta hai |
+| 1 | `# This program prints student details` | Ye comment line hai. Python is line ko execute nahi karta. Ye sirf human reader ko batata hai ki program student details print karega. |
+| 3 | `name = "Ayesha"` | Is line mein name variable create hota hai. Comment ke baad actual executable code start hota hai. |
+| 4 | `course = "Python"` | Course variable mein Python text store hota hai. Ye value later output mein print hogi. |
+| 6 | `print(name)` | Name variable ki value print hoti hai. Output `Ayesha` hota hai. |
+| 7 | `print(course)` | Course variable ki value print hoti hai. Output `Python` hota hai. |
 
 ---
 
-# Chapter 7 - Comments
+# 7. Basic Python Syntax
 
-## Comment Kya Hota Hai?
+## Topic Samjho
 
-Comment code ke andar note hota hai. Python comment ko execute nahi karta. Comment programmer ke liye hota hai, taaki code samajhna easy ho.
+Syntax ka matlab programming language ke writing rules. Jaise English mein grammar hoti hai, waise Python mein syntax hota hai. Agar syntax wrong hua to error aayega.
 
-Python mein single-line comment ke liye `#` use hota hai.
+## Kyu Use Karte Hain?
 
-## Code
+Syntax rules follow karne se Python code samajh paata hai. Quotes, brackets, indentation, colon, spelling, case sensitivity sab syntax ka part hain.
 
-```python
-# This program prints student details
+## Fayda
 
-name = "Rahul"
-age = 21
+Syntax clear hone se beginner errors kam hote hain. Student ko pata hota hai string quotes mein likhni hai, function brackets ke saath call hota hai, aur Python case-sensitive hota hai.
 
-print(name)
-print(age)
-```
-
-## Explanation
-
-First line comment hai. Python is line ko execute nahi karega. Comment ka use code ka purpose explain karne ke liye hota hai. Beginners ko comments use karne chahiye, but har obvious line par comment nahi likhna chahiye.
-
----
-
-# Chapter 8 - Basic Python Syntax
-
-## Syntax Kya Hota Hai?
-
-Syntax ka matlab programming language ke writing rules. Jaise English mein grammar hoti hai, waise Python mein syntax hota hai. Agar syntax wrong hai, Python error show karega.
-
-Basic syntax rules:
-
-- Strings quotes mein likhte hain.
-- Function call mein brackets use hote hain.
-- Variable assignment ke liye `=` use hota hai.
-- Python case-sensitive hai.
-- Code spelling correct honi chahiye.
-
-## Correct Code
+## Practical Code
 
 ```python
 message = "Welcome to Python"
 print(message)
 ```
 
-## Wrong Code
+## Output
 
-```python
-Message = "Welcome to Python"
-print(message)
+```text
+Welcome to Python
 ```
 
-Yahan error aa sakta hai, kyunki `Message` aur `message` Python mein different names hain.
+## Detailed Code Explanation
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1 | `message = "Welcome to Python"` | `message` variable mein text store kiya gaya hai. Text quotes ke andar hai, isliye Python ise string samajhta hai. Assignment ke liye single `=` use hota hai. |
+| 2 | `print(message)` | Ye line `message` variable ki stored value print karti hai. Yahan quotes nahi lagaye because hume variable ki value chahiye. Output `Welcome to Python` hota hai. |
 
 ---
 
-# Chapter 9 - Practical 1: Student Profile
+# 8. Basic Programming Practice
 
-## Practical Goal
+## Topic Samjho
 
-Is practical mein hum user se student details lenge aur clean profile print karenge. Ye practical variables, input, output, and string handling ka practice karayega.
+Basic programming practice ka matlab hai chhote-chhote programs likhkar concepts apply karna. Sirf theory padhne se programming strong nahi hoti. Code type karna, run karna, error solve karna zaroori hai.
 
-## Code
+## Kyu Use Karte Hain?
+
+Practice se learner ko confidence milta hai. Variables, input, output, type casting, comments, syntax sab ek saath use karna aata hai.
+
+## Fayda
+
+Practice programs future projects ka base banate hain. Student profile, bill calculator, marks calculator jaise programs se real-life logic samajh aata hai.
+
+## Practical Code
 
 ```python
-name = input("Enter student name: ")
-age = int(input("Enter age: "))
-city = input("Enter city: ")
-course = input("Enter course name: ")
+student_name = input("Enter student name: ")
+marks = float(input("Enter marks: "))
 
 print("")
-print("Student Profile")
-print("----------------")
-print("Name:", name)
-print("Age:", age)
-print("City:", city)
-print("Course:", course)
-print("Next year age:", age + 1)
+print("Student Result")
+print("Name:", student_name)
+print("Marks:", marks)
 ```
 
 ## Output
 
 ```text
 Enter student name: Rahul
-Enter age: 21
-Enter city: Delhi
-Enter course name: Python
+Enter marks: 88
 
-Student Profile
-----------------
+Student Result
 Name: Rahul
-Age: 21
-City: Delhi
-Course: Python
-Next year age: 22
+Marks: 88.0
 ```
 
-## Detailed Explanation
-
-Yahan `name`, `city`, and `course` string values hain. `age` ko `int()` mein convert kiya gaya hai, kyunki age par calculation karni hai. Last line mein `age + 1` se next year age calculate hoti hai. Is practical se learners ko samajh aata hai ki input by default string hota hai, aur calculation ke liye type casting required hoti hai.
-
-## Deep Line-by-Line Explanation
-
-| Code | Simple Hinglish Explanation |
-|---|---|
-| `name = input("Enter student name: ")` | Is line mein program user se student ka naam poochta hai. User jo bhi type karega, woh `name` variable mein store ho jayega. Name text hota hai, isliye hume conversion ki zaroorat nahi hai. |
-| `age = int(input("Enter age: "))` | Yahan pehle `input()` age leta hai, lekin input string form mein aata hai. Hum `int()` use karke us string ko number mein convert kar rahe hain, kyunki aage age par calculation karni hai. |
-| `city = input("Enter city: ")` | Is line mein city input li ja rahi hai. City bhi text value hai, isliye normal input enough hai. |
-| `course = input("Enter course name: ")` | Is line mein course name input liya ja raha hai. Course name variable mein store hoga and baad mein profile mein print hoga. |
-| `print("")` | Ye blank line print karta hai. Blank line ka use output ko clean and readable banane ke liye hota hai. |
-| `print("Student Profile")` | Ye output ka heading hai. Heading se user ko samajh aata hai ki ab profile details show hongi. |
-| `print("----------------")` | Ye separator line hai. Iska logic se lena dena nahi hai, but output professional and organized lagta hai. |
-| `print("Name:", name)` | Yahan fixed label `Name:` and variable `name` ki value ek saath print hoti hai. Comma values ke beech space add karta hai. |
-| `print("Age:", age)` | Yahan age print hoti hai. Age ab integer hai because humne `int()` use kiya tha. |
-| `print("Next year age:", age + 1)` | Yahan calculation ho rahi hai. Since age number hai, Python `age + 1` calculate kar sakta hai. Agar age string hoti, to error aata. |
-
-## Classroom Explanation Paragraph
-
-Is practical ko explain karte time students ko bolo ki ye ek real application form ka simple version hai. Jab hum kisi website par registration form fill karte hain, website humse name, age, city, course jaisi values leti hai. Python mein hum `input()` se wahi kaam kar rahe hain. Difference bas itna hai ki yahan output terminal mein show ho raha hai. Is program mein sabse important line `age = int(input(...))` hai, kyunki ye line input and type casting dono concepts ko combine karti hai.
-
----
-
-# Chapter 10 - Practical 2: Marks Calculator
-
-## Practical Goal
-
-Is practical mein hum three subjects ke marks input lenge, total calculate karenge, percentage calculate karenge, and result print karenge. Ye Day 2 ka most important practical hai.
-
-## Code
-
-```python
-student_name = input("Enter student name: ")
-
-math_marks = float(input("Enter Math marks: "))
-science_marks = float(input("Enter Science marks: "))
-english_marks = float(input("Enter English marks: "))
-
-total_marks = math_marks + science_marks + english_marks
-percentage = (total_marks / 300) * 100
-
-print("")
-print("Marks Report")
-print("------------")
-print("Student:", student_name)
-print("Total Marks:", total_marks)
-print("Percentage:", percentage)
-```
-
-## Output
-
-```text
-Enter student name: Ayesha
-Enter Math marks: 85
-Enter Science marks: 90
-Enter English marks: 80
-
-Marks Report
-------------
-Student: Ayesha
-Total Marks: 255.0
-Percentage: 85.0
-```
-
-## Line-by-Line Explanation
+## Detailed Code Explanation
 
 | Line | Code | Explanation |
 |---|---|---|
-| 1 | `student_name = input(...)` | Student ka naam input liya. |
-| 3 | `float(input(...))` | Marks input liye aur decimal number mein convert kiya. |
-| 7 | `total_marks = ...` | Three subjects ke marks add kiye. |
-| 8 | `percentage = ...` | Percentage formula apply kiya. |
-| 12-14 | `print(...)` | Final marks report print ki. |
+| 1 | `student_name = input("Enter student name: ")` | User se student name input liya ja raha hai. Naam string hota hai, isliye direct input store kar sakte hain. |
+| 2 | `marks = float(input("Enter marks: "))` | Marks input liye ja rahe hain. Since marks decimal bhi ho sakte hain, `float()` use karke input ko number mein convert kiya gaya. |
+| 4 | `print("")` | Ye blank line print karta hai. Output ko clean and readable banane ke liye blank line useful hoti hai. |
+| 5 | `print("Student Result")` | Ye output ka heading print karta hai. Heading se user ko samajh aata hai ki result section start ho gaya hai. |
+| 6 | `print("Name:", student_name)` | Student ka naam label ke saath print hota hai. Comma text and variable ko combine karta hai. |
+| 7 | `print("Marks:", marks)` | Marks variable ki value print hoti hai. Since marks float mein convert hue hain, output `88.0` aa sakta hai. |
 
-## Deep Line-by-Line Explanation
-
-| Code | Simple Hinglish Explanation |
-|---|---|
-| `student_name = input("Enter student name: ")` | Program student ka naam poochta hai. Naam string hota hai, so direct input store kar sakte hain. |
-| `math_marks = float(input("Enter Math marks: "))` | Math marks input liye ja rahe hain. Marks decimal bhi ho sakte hain, jaise `85.5`, isliye `float()` use kar rahe hain. |
-| `science_marks = float(input("Enter Science marks: "))` | Science marks bhi decimal number mein convert ho rahe hain. Ye calculation ke liye zaroori hai. |
-| `english_marks = float(input("Enter English marks: "))` | English marks input lekar float mein convert kiye. Ab teeno marks numbers ban chuke hain. |
-| `total_marks = math_marks + science_marks + english_marks` | Teeno subject marks add karke total calculate kiya. Ye arithmetic operator `+` ka practical use hai. |
-| `percentage = (total_marks / 300) * 100` | Percentage formula apply kiya. Total maximum marks 300 maan rahe hain, kyunki 3 subjects hain and har subject 100 marks ka hai. |
-| `print("")` | Report se pehle ek blank line. Output clean dikhta hai. |
-| `print("Marks Report")` | Report heading print hoti hai. |
-| `print("Student:", student_name)` | Student ka naam report mein show hota hai. |
-| `print("Total Marks:", total_marks)` | Calculated total marks print hote hain. |
-| `print("Percentage:", percentage)` | Calculated percentage print hoti hai. |
-
-## Formula Explanation
-
-Percentage ka formula hota hai:
-
-```text
-percentage = (obtained marks / total marks) * 100
-```
-
-Yahan obtained marks `total_marks` hai. Total marks 300 hain because 3 subjects hain. Agar 5 subjects honge, aur har subject 100 marks ka hoga, to denominator 500 ho jayega. Students ko ye point zaroor samjhao, kyunki formula ko blindly yaad karne ke bajay logic samajhna important hai.
-
-## Teacher Style Explanation
-
-“Ye practical real-life marksheet ka basic version hai. Agar marks string form mein rahenge, calculation nahi hogi. Isliye hum `float()` use kar rahe hain. Total marks addition se nikalta hai, percentage formula se nikalta hai. Ye small practical future Student Marks Management System project ka base ban sakta hai.”
-
----
-
-# Chapter 11 - Practical 3: Product Bill Calculator
-
-## Practical Goal
-
-Is practical mein hum user se product name, product price, and quantity input lenge. Phir total bill calculate karenge. Ye practical business billing system ka beginner version hai.
-
-Is practical se learners ko samajh aayega ki real applications mein input values calculation ke liye kaise use hoti hain. Product price decimal ho sakta hai, isliye `float()` use karenge. Quantity whole number hoti hai, isliye `int()` use karenge.
-
-## Code
-
-```python
-product_name = input("Enter product name: ")
-price = float(input("Enter product price: "))
-quantity = int(input("Enter quantity: "))
-
-total_bill = price * quantity
-
-print("")
-print("Bill Summary")
-print("------------")
-print("Product:", product_name)
-print("Price:", price)
-print("Quantity:", quantity)
-print("Total Bill:", total_bill)
-```
-
-## Output
-
-```text
-Enter product name: Notebook
-Enter product price: 45.50
-Enter quantity: 4
-
-Bill Summary
-------------
-Product: Notebook
-Price: 45.5
-Quantity: 4
-Total Bill: 182.0
-```
-
-## Line-by-Line Explanation
-
-| Line | Code | Explanation |
-|---|---|---|
-| 1 | `product_name = input(...)` | Product ka naam user se input liya. Ye string rahega. |
-| 2 | `price = float(input(...))` | Product price input liya and decimal number mein convert kiya. |
-| 3 | `quantity = int(input(...))` | Quantity input li and whole number mein convert ki. |
-| 5 | `total_bill = price * quantity` | Price aur quantity multiply karke bill calculate kiya. |
-| 8 | `print("Bill Summary")` | Output ka heading print kiya. |
-| 11 | `print("Quantity:", quantity)` | Quantity value print ki. |
-| 12 | `print("Total Bill:", total_bill)` | Final bill amount print kiya. |
-
-## Deep Line-by-Line Explanation
-
-| Code | Simple Hinglish Explanation |
-|---|---|
-| `product_name = input("Enter product name: ")` | User product ka naam type karega. Example: Notebook, Pen, Bag. Ye text hai, so string rahega. |
-| `price = float(input("Enter product price: "))` | Product price decimal ho sakta hai, jaise 45.50. Isliye input ko `float()` se decimal number mein convert karte hain. |
-| `quantity = int(input("Enter quantity: "))` | Quantity usually whole number hoti hai, jaise 1, 2, 5. Isliye `int()` use karte hain. |
-| `total_bill = price * quantity` | Price and quantity multiply hote hain. Agar price 45.5 and quantity 4 hai, to total bill 182.0 hoga. |
-| `print("Bill Summary")` | Bill ka heading print hota hai. |
-| `print("Product:", product_name)` | Product name bill mein show hota hai. |
-| `print("Price:", price)` | Product ka single item price print hota hai. |
-| `print("Quantity:", quantity)` | Kitne items kharide gaye, woh print hota hai. |
-| `print("Total Bill:", total_bill)` | Final amount print hota hai jo customer ko pay karna hai. |
-
-## Real-Life Explanation
-
-Ye practical shop billing system ka baby version hai. Real billing software mein bhi product name, price, quantity, discount, tax, and final amount calculate hota hai. Abhi hum sirf price and quantity se total bill nikal rahe hain. Later students discount, GST, and final payable amount add kar sakte hain.
-
-## Teacher Style Explanation
-
-“Ye practical students ko real-world billing ka idea deta hai. Agar shopkeeper ke paas product price and quantity hai, to total bill multiplication se niklega. Lekin input se price string form mein aata hai, isliye `float()` use karna zaroori hai. Quantity usually whole number hoti hai, isliye `int()` use karte hain. Is practical mein type casting ka real use clear hota hai.”
-
-## Student Modification Task
-
-Is program mein discount add karo. User se discount amount input lo and final bill calculate karo:
-
-```python
-final_bill = total_bill - discount
-```
-
----
-
-# Chapter 12 - Practical 4: Age Calculator
-
-## Practical Goal
-
-Is practical mein hum user se birth year and current year input lenge, phir approximate age calculate karenge. Ye type casting and subtraction ka easy real-life practical hai.
-
-## Code
-
-```python
-name = input("Enter your name: ")
-birth_year = int(input("Enter your birth year: "))
-current_year = int(input("Enter current year: "))
-
-age = current_year - birth_year
-
-print("")
-print("Age Summary")
-print("-----------")
-print("Name:", name)
-print("Birth Year:", birth_year)
-print("Current Year:", current_year)
-print("Approx Age:", age)
-```
-
-## Output
-
-```text
-Enter your name: Rahul
-Enter your birth year: 2003
-Enter current year: 2026
-
-Age Summary
------------
-Name: Rahul
-Birth Year: 2003
-Current Year: 2026
-Approx Age: 23
-```
-
-## Line-by-Line Explanation
-
-| Line | Code | Explanation |
-|---|---|---|
-| 1 | `name = input(...)` | User ka name input liya. |
-| 2 | `birth_year = int(input(...))` | Birth year input liya and integer mein convert kiya. |
-| 3 | `current_year = int(input(...))` | Current year input liya and integer mein convert kiya. |
-| 5 | `age = current_year - birth_year` | Current year se birth year subtract karke age calculate ki. |
-| 8-13 | `print(...)` | Clean age summary print ki. |
-
-## Deep Line-by-Line Explanation
-
-| Code | Simple Hinglish Explanation |
-|---|---|
-| `name = input("Enter your name: ")` | User ka name input hota hai. Ye output ko personal banata hai. |
-| `birth_year = int(input("Enter your birth year: "))` | Birth year input string form mein aata hai, phir `int()` se number mein convert hota hai. |
-| `current_year = int(input("Enter current year: "))` | Current year bhi number hona chahiye, kyunki subtraction karni hai. |
-| `age = current_year - birth_year` | Ye main calculation hai. Current year se birth year minus karne par approximate age milti hai. |
-| `print("Age Summary")` | Output section ka heading print karta hai. |
-| `print("Name:", name)` | User ka name print karta hai. |
-| `print("Birth Year:", birth_year)` | Birth year show karta hai taaki output clear ho. |
-| `print("Current Year:", current_year)` | Current year show karta hai. |
-| `print("Approx Age:", age)` | Final calculated age print karta hai. |
-
-## Important Note
-
-Ye approximate age calculator hai. Exact age calculate karne ke liye month and date bhi chahiye hoti hai. Day 2 ke level par hum sirf year ke basis par age calculate kar rahe hain so type casting and subtraction clear ho sake.
-
-## Teacher Style Explanation
-
-“Yahan students ko input, type casting, and calculation ka combined use dikh raha hai. Birth year and current year agar string rahenge to subtraction nahi hogi. Isliye hum dono values ko `int()` mein convert karte hain. Phir simple subtraction se approximate age calculate hoti hai.”
-
-## Student Modification Task
-
-Is program mein city input add karo and final message print karo:
-
-```python
-print(name, "from", city, "is approximately", age, "years old.")
-```
-
----
-
-# Chapter 13 - Day 2 Combined Mini Project
-
-## Project Goal
-
-Ab Day 2 ke concepts ko combine karke ek mini project bana sakte hain: Student Learning Summary. Isme learner ka name, age, city, course, daily practice hours, and three subject marks input honge. Program total marks, percentage, and next year age print karega.
-
-## Code
-
-```python
-name = input("Enter name: ")
-age = int(input("Enter age: "))
-city = input("Enter city: ")
-course = input("Enter course: ")
-daily_hours = float(input("Daily practice hours: "))
-
-python_marks = float(input("Python marks: "))
-logic_marks = float(input("Logic marks: "))
-project_marks = float(input("Project marks: "))
-
-total = python_marks + logic_marks + project_marks
-percentage = (total / 300) * 100
-
-print("")
-print("Student Learning Summary")
-print("------------------------")
-print("Name:", name)
-print("Age:", age)
-print("Next Year Age:", age + 1)
-print("City:", city)
-print("Course:", course)
-print("Daily Practice:", daily_hours, "hours")
-print("Total Marks:", total)
-print("Percentage:", percentage)
-```
-
-## Teacher Style Explanation
-
-“Ye mini project Day 2 ke saare main concepts combine karta hai. Isme input hai, variables hain, `int()` hai, `float()` hai, addition hai, percentage formula hai, and clean output hai. Agar learner ye project samajh gaya, to Day 2 ka foundation strong hai.”
-
-## Mini Project Deep Explanation
-
-Is mini project mein students ko samjhao ki real programs ek hi concept se nahi bante. Real program mein multiple concepts combine hote hain. Is project mein text input ke liye normal `input()` use hua, age ke liye `int()` use hua, daily practice hours and marks ke liye `float()` use hua. Phir arithmetic operators se total and percentage calculate hua. Last mein `print()` se clean report generate hui.
-
-Important teaching point:
-
-```python
-percentage = (total / 300) * 100
-```
-
-Yahan `total` obtained marks hai. `300` maximum marks hai. `* 100` percentage convert karne ke liye use hota hai. Students ko formula ka meaning samjhao, sirf formula yaad mat karvao.
-
-## Mini Project Improvement Ideas
-
-1. Percentage ko round karke print karo.
-2. Student ka goal input lo.
-3. Course completion target days input lo.
-4. Final motivational message print karo.
-5. Agar percentage 75 se zyada ho to “Excellent” print karo. Ye Day 3 condition topic ka preview ban sakta hai.
-
----
-
-# Day 2 - Complete Code Explanation Appendix
-
-Is section ka purpose yeh hai ki Day 2 document mein jo basic code examples diye gaye hain, unki har important line ko simple Hinglish mein detail se samjha diya jaye. Agar aap class mein padha rahe ho, to code dikhane ke baad is explanation ko directly use kar sakte ho.
-
-## Appendix 1 - Basic Variable Code
-
-```python
-name = "Rahul"
-age = 21
-city = "Delhi"
-course = "Python"
-```
-
-`name = "Rahul"` ka matlab hai humne `name` naam ka variable banaya. Is variable ke andar `"Rahul"` text store kiya. Quotes batate hain ki value string hai. Jab bhi hum code mein `name` use karenge, Python uske andar stored value ko refer karega.
-
-`age = 21` mein `age` naam ka variable create hota hai. Iske andar number `21` store hota hai. Yahan quotes nahi lagaye gaye, kyunki 21 text nahi, number hai. Agar future mein age par calculation karni ho, to number form useful hota hai.
-
-`city = "Delhi"` mein city ka naam text ke form mein store hota hai. City name string hai, isliye double quotes ke andar likha gaya hai. Variable ka naam meaningful hai, isliye code padhte hi samajh aa raha hai ki isme city store hai.
-
-`course = "Python"` mein course ka naam store kiya gaya hai. Ye bhi string value hai. Is tarah multiple values ko alag-alag variables mein store karke hum program ko organized bana sakte hain.
-
-## Appendix 2 - Printing Variables
-
-```python
-print(name)
-print(age)
-print(city)
-print(course)
-```
-
-`print(name)` variable `name` ke andar jo value stored hai, usko screen par show karta hai. Yahan quotes nahi lagaye gaye because hum actual word `name` print nahi karna chahte. Hum variable ki stored value print karna chahte hain.
-
-`print(age)` age variable ki value print karta hai. Since `age` mein 21 store hai, output mein 21 aayega. `print()` ka kaam value ko terminal/screen par display karna hai.
-
-`print(city)` city variable ki stored value show karta hai. Agar city variable mein `"Delhi"` hai, output `Delhi` hoga. Yahan bhi Python variable ke naam ko read karke uski value fetch karta hai.
-
-`print(course)` course variable ki value output mein show karta hai. Ye line batati hai ki ek baar value variable mein store ho jaaye, to hum usko baar-baar use kar sakte hain.
-
-## Appendix 3 - Variable Naming Code
-
-```python
-student_name = "Ayesha"
-student_age = 20
-total_marks = 450
-```
-
-`student_name = "Ayesha"` ek meaningful variable name ka example hai. `student_name` padhte hi samajh aa jata hai ki is variable mein student ka naam store hoga. Underscore spaces ki jagah use hota hai, kyunki Python variable name mein spaces allowed nahi hain.
-
-`student_age = 20` mein student ki age store ki gayi hai. Variable name letter se start ho raha hai, isliye valid hai. Value number hai, isliye quotes nahi lagaye gaye.
-
-`total_marks = 450` mein total marks store kiye gaye hain. Ye name clear hai and future calculation ke liye useful hai. Agar variable ka naam sirf `tm` rakhte, to beginner ko samajhne mein problem hoti.
-
-## Appendix 4 - Data Types Code
-
-```python
-age = 21
-price = 99.50
-name = "Rahul"
-is_student = True
-```
-
-`age = 21` integer data type ka example hai. Integer ka matlab whole number, jisme decimal point nahi hota. Age, count, quantity jaise values usually integer hoti hain.
-
-`price = 99.50` float data type ka example hai. Float ka matlab decimal number. Price, percentage, temperature jaise values decimal ho sakti hain, isliye float useful hota hai.
-
-`name = "Rahul"` string data type ka example hai. String text value hoti hai. Python mein string quotes ke andar likhi jaati hai, chahe single quotes ho ya double quotes.
-
-`is_student = True` boolean data type ka example hai. Boolean mein sirf two possible values hoti hain: `True` ya `False`. Yes/no, active/inactive, pass/fail jaise logic mein boolean useful hota hai.
-
-## Appendix 5 - Type Checking Code
-
-```python
-print(type(age))
-print(type(price))
-print(type(name))
-print(type(is_student))
-```
-
-`print(type(age))` pehle `type(age)` se age variable ka data type check karta hai. Phir `print()` us type ko screen par show karta hai. Agar age mein 21 hai, output `<class 'int'>` aayega.
-
-`print(type(price))` price variable ka type check karta hai. Since price mein decimal value hai, output `<class 'float'>` hoga. Isse learner ko confirm hota hai ki Python value ko decimal number samajh raha hai.
-
-`print(type(name))` name variable ka type check karta hai. Name text hai, so output `<class 'str'>` hoga. `str` ka full form string hai.
-
-`print(type(is_student))` boolean value ka type check karta hai. Since value `True` hai, output `<class 'bool'>` hoga. Ye line boolean concept ko practically show karti hai.
-
-## Appendix 6 - Input and Output Code
-
-```python
-name = input("Enter your name: ")
-city = input("Enter your city: ")
-
-print("Hello", name)
-print("You are from", city)
-```
-
-`name = input("Enter your name: ")` user ko prompt show karta hai. User jo naam type karega, woh `name` variable mein store ho jayega. `input()` se aane wali value by default string hoti hai.
-
-`city = input("Enter your city: ")` user se city input leta hai. Prompt ke andar jo text hai, woh user ko guide karta hai ki kya type karna hai. Good prompt program ko user-friendly banata hai.
-
-`print("Hello", name)` fixed text `"Hello"` and variable `name` dono ko print karta hai. Comma ka use karne se Python automatically space add kar deta hai. Output personal feel hota hai, jaise `Hello Rahul`.
-
-`print("You are from", city)` fixed sentence and city variable ko combine karta hai. Agar city Delhi hai, output `You are from Delhi` hoga. Ye dynamic output ka simple example hai.
-
-## Appendix 7 - Wrong Casting Example
-
-```python
-age = input("Enter your age: ")
-
-print(age + 1)
-```
-
-`age = input("Enter your age: ")` user se age input leta hai. Lekin important point yeh hai ki `input()` age ko string form mein store karta hai. Agar user 21 type kare, Python usko `"21"` text ki tarah treat karega.
-
-`print(age + 1)` error de sakta hai because yahan string and integer ko add karne ki koshish ho rahi hai. Python text `"21"` and number `1` ko directly add nahi kar sakta. Isi wajah se type casting required hoti hai.
-
-## Appendix 8 - Correct Casting Example
-
-```python
-age = input("Enter your age: ")
-age = int(age)
-
-print("Next year your age will be", age + 1)
-```
-
-`age = input("Enter your age: ")` user se age input leta hai, but value abhi string form mein hoti hai. Ye first step sirf data collect karta hai. Calculation ke liye value ready nahi hai.
-
-`age = int(age)` same age value ko integer mein convert karta hai. Left side wala `age` updated value store karta hai. Right side wala `int(age)` old string value ko number mein convert karta hai.
-
-`print("Next year your age will be", age + 1)` ab calculation safely kar sakta hai. Since age integer ban chuki hai, `age + 1` next year age calculate karta hai. Output readable sentence ke form mein print hota hai.
-
-## Appendix 9 - Comments Code
-
-```python
-# This program prints student details
-
-name = "Rahul"
-age = 21
-
-print(name)
-print(age)
-```
-
-`# This program prints student details` comment line hai. Python is line ko execute nahi karta. Comment ka purpose human reader ko batana hai ki program kya kar raha hai.
-
-`name = "Rahul"` normal variable assignment hai. Comment ke baad actual code start hota hai. Yahan student ka naam store kiya gaya hai.
-
-`age = 21` age variable mein number store karta hai. Ye value later output mein print hogi. Since age number hai, quotes nahi hain.
-
-`print(name)` name variable ki value screen par show karta hai. Comment execute nahi hua, but code line execute hoti hai.
-
-`print(age)` age variable ki value show karta hai. Is example se learners ko comments and executable code ka difference samajh aata hai.
-
-## Appendix 10 - Syntax Case-Sensitivity Code
-
-```python
-Message = "Welcome to Python"
-print(message)
-```
-
-`Message = "Welcome to Python"` mein variable ka naam capital `M` se start ho raha hai. Python is variable ko exactly `Message` naam se store karta hai. Python case-sensitive hai, matlab capital and small letters different hote hain.
-
-`print(message)` small `m` wale variable ko print karne ki koshish karta hai. Lekin code mein small `message` variable create hi nahi hua. Isliye Python error de sakta hai. Correct code mein variable name same hona chahiye: `print(Message)`.
-
----
-
-# Day 2 Practice Questions
-
-1. Apna name, age, city, and goal input lo aur clean summary print karo.
-2. User se product name, price, and quantity input lo. Total bill calculate karo.
-3. User se birth year input lo aur approximate age calculate karo.
-4. Three subject marks input lo aur total/percentage calculate karo.
-5. Kisi bhi program mein comments add karo and explain karo comments ka use kya hai.
-6. Bill calculator mein discount add karo.
-7. Age calculator mein city and final sentence add karo.
-8. Student Learning Summary mini project complete karo.
-
----
-
-# Day 2 Summary
-
-Day 2 mein humne variables, naming rules, data types, `type()`, input, output, type casting, comments, and basic syntax samjha. Humne student profile and marks calculator practical bhi kiya.
-
-Important takeaway:
-
-Python mein data ko variable mein store karte hain. Har value ka data type hota hai. User input by default string hota hai. Calculation ke liye type casting zaroori hoti hai. Clean output ke liye `print()` ko properly use karna chahiye.
